@@ -1,0 +1,116 @@
+body{
+	margin: 0px;
+	width: 100vw;
+	height: 100vh;
+	background: linear-gradient(to bottom right, #473057 35%, #333366);
+	font-family: sans-serif;
+	display: flex;
+	flex-wrap: wrap;
+}
+
+body::-webkit-scrollbar {
+  	width: 0px;
+}
+
+h1{
+	margin: 10vh 0vh 10vh 0vh;
+	letter-spacing: 20px;
+	color: whitesmoke;
+	text-shadow: #A9FFDA 3px 0px;
+	font-size: 6vh;
+}
+
+.title{
+	width: 55vw;
+	display: flex;
+	flex-direction: column;
+	padding: 0vw 5vw 0vw 5vw;
+	letter-spacing: 4px;
+	font-size: 140%;
+}
+
+.soustitre{
+	margin-bottom: 3.5vh;
+}
+
+.nav{
+	width: 34vw;
+	letter-spacing: 8px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+}
+
+.nav ul{
+	padding: 0px;
+	list-style-type: none;
+	display: flex;
+	flex-direction: column;
+}
+
+.nav li{
+	font-size: 2.5vh;
+	margin: 8vh 0vh 8vh 0vh;
+	text-align: center;
+	transition-duration: 0.3s;
+}
+
+a{
+	text-decoration: none;
+	color: whitesmoke;
+}
+
+.nav li:hover{
+	text-shadow: #6E4689 6px 6px;
+	transition-duration: 0.3s;
+}
+
+hr{
+	padding: 0px;
+	margin: 0px;
+	margin-top: 10vh;
+	width: 2px;
+	height: 80vh;
+	background-color: whitesmoke;
+	border: 0px;
+}
+
+.content{
+	width: 100vw;
+	height: 130vh;
+	background-image: url("https://www.nowteam.net/wp-content/uploads/2019/01/annie-spratt-608001-unsplash-1080x675.jpg");
+	background-size: cover;
+	filter: grayscale(0.8);
+	display: flex;
+	justify-content: center;
+}
+
+.content ul{
+	width: 50vw;
+	background-color: rgba(71, 48, 87, 0.7);
+	color: whitesmoke;
+	padding: 10vh;
+	margin: 20vh 0vh 20vh 0vh;
+	list-style-type: none;
+	line-height: 1.7em;
+	letter-spacing: 2px;
+}
+
+.content ul li{
+	margin-bottom: 4vh;
+}
+
+footer{
+	background-color: black;
+	color: whitesmoke;
+	width: 100%;
+	height: 10vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	letter-spacing: 5px;
+	color: whitesmoke;
+	font-size: 1.6vh;
+	padding: 2vw;
+}

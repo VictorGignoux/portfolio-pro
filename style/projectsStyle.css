@@ -1,0 +1,301 @@
+/* ************ DESCRIPTION DES PROJETS *********** */
+
+#descriptions{
+	position: relative;
+	width: 40%;
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.description{
+	position: absolute;
+	width: 80%;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: center;
+	opacity: 0;
+	z-index: -1;
+	transition: 0.2s;
+}
+
+.description-title{
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+}
+
+.description-title-first{
+	font-size: 2vw;
+	color: var(--title);
+}
+
+.description-title-sub{
+	font-size: 1.2vw;
+	color: var(--text);
+	display: flex;
+	align-items: center;
+}
+
+.description-title-sub *{
+	margin-right: 1vh;
+}
+
+.description-text{
+	font-size: 1.2vw;
+	color: var(--text);
+	font-family: aston;
+	width: 90%;
+	line-height: 1.3;
+	text-align: justify;
+}
+
+.description-button{
+	font-family: peace;
+	font-size: 1.2vw;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: relative;
+	width: 10vw;
+	height: 6vh;
+	overflow: hidden;
+	border: 0;
+	border-radius: 1.2vw;
+	transition: 0.2s;
+	background-color: var(--text);
+	color: var(--background);
+}
+
+.description-button-svg{
+	width: 1vw;
+	margin-left: 0.4vw;
+}
+
+.description-button:hover{
+	box-shadow: 0 0 1em var(--lightShadow);
+	cursor: pointer;
+}
+
+.currentDescription{
+	opacity: 1;
+	z-index: 1;
+}
+
+.subtitleSVG{
+	max-width: 2vw;
+	max-height: 3vh;
+}
+
+.description > *{
+	margin-bottom: 4vh;
+}
+
+/* ************ PROJETS *********** */
+
+#right{
+	width: 60%;
+	display: flex;
+}
+
+#projects{
+	position: relative;
+	height: 100%;
+	width: 93%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.project{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	position: absolute;
+	width: 100%;
+	height: 70vh;
+	user-select: none;
+	color: white;
+	background-color: var(--darkShadow);
+	border-radius: 20px;
+	transition: 0.3s;
+	overflow: hidden;
+}
+
+.project-title{
+	color: var(--title);
+	font-size: 4.5vw;
+	z-index: 5;
+	transition: opacity 0.3s;
+	display: flex;
+	justify-content: center;
+	text-align: center;
+	text-shadow: 5px 5px var(--background);
+}
+
+.project:hover{
+	box-shadow: 0 0 2em var(--darkShadow);
+	cursor: pointer;
+}
+
+.project:hover .project-title{
+	opacity: 0;
+}
+
+.project:hover .project-buttons{
+	opacity: 1;
+}
+
+.project:hover video{
+	filter: grayscale(0%);
+}
+
+.project:hover .project-images{
+	filter: grayscale(10%);
+}
+
+.project-images{
+	position: absolute;
+	height: 100%;
+	width: 100%;
+	top: 0;
+	left: 0;
+	display: flex;
+	border-radius: 20px;
+	filter: grayscale(100%);
+	transition: 0.3s;
+}
+
+.project-images-image{
+	width: 55.8vw; /* width: 100%; /* pas compatible avec firefox */
+	object-fit: contain;
+}
+
+.project-buttons{
+	position: absolute;
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	opacity: 0;
+	transition: 0.3s;
+}
+
+.project-button-swipe{
+	margin: 1vw;
+	color: white;
+	width: 2vw;
+	border: 0;
+	background-color: transparent;
+	transition: 0.2s;
+}
+
+.project-button-swipe svg{
+	fill: var(--darkShadow);
+}
+
+.project-button-swipe:hover{
+	cursor: pointer;
+	transform: scale(1.2);
+}
+
+.leftArrow{
+	width: 0;
+}
+
+/* ************ POINTS *********** */
+
+#points{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	width: 7%;
+}
+
+.point{
+	width: 0.7vw;
+	height: 0.7vw;
+	background-color: var(--darkShadow);
+	border: 0;
+	border-radius: 100%;
+	margin: 1.4vh;
+	transition: 0.3s;
+	position: relative;
+}
+
+.point-indication{
+	position: absolute;
+	top: -100%;
+	right: 1.5vw;
+	padding: 1vh;
+	font-family: aston;
+	font-size: 1.1vw;
+	color: white;
+	background-color: var(--lightShadow);
+	border-radius: 0.6vw;
+	z-index: 10;
+	white-space: nowrap;
+	transition: 0.15s;
+	transform: scale(0);
+}
+
+.currentPoint{
+	background-color: var(--lightShadow);
+}
+
+.point:hover{
+	cursor: pointer;
+}
+
+.point:hover .point-indication{
+	transform: scale(1);
+}
+
+/* *************** BOUTON POUR FEMER LA FENÊTRE ************ */
+
+#closePageButton{
+	font-family: aston;
+	font-size: 1vw;
+	z-index: 10;
+	position: fixed;
+	top: 3vh;
+	left: 1.6vw;
+	border: 0;
+	background-color: var(--bg);
+	color: var(--text);
+	width: 6vw;
+	height: 5vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+#closePageButtonText{
+	z-index: 12;
+}
+
+#closePageButtonUnderline{
+	z-index: 1;
+	position: absolute;
+	width: 0vw;
+	height: 3vh;
+	border-bottom: 2px solid var(--text);
+	transition: 0.3s;
+}
+
+#closePageButton:hover #closePageButtonUnderline{
+	width: 4vw;
+}
+
+video{
+	position: absolute;
+	object-fit: cover;
+	width: 100%;
+	height: 100%;
+	border-radius: 20px;
+	filter: grayscale(100%);
+	z-index: 1;
+}

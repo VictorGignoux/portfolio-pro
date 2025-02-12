@@ -1,0 +1,48 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+
+/* ************ VARIABLES *********** */
+
+html{
+	--background: #0D1235;
+	--title: #6F86A7;
+	--text: #ECE6CE;
+	--lightShadow: #3C5790;
+	--darkShadow: #2D2F60;
+}
+
+/* ************ FONTS *********** */
+
+@font-face {
+    font-family: 'peace';
+    src: url('font/Peace Sans Webfont.ttf');
+}
+
+@font-face {
+    font-family: 'stray';
+    src: url('font/stray.ttf');
+}
+
+@font-face {
+    font-family: 'aston';
+    src: url('font/Astonpoliz.ttf');
+}
+
+body{
+	width: 100vw;
+	height: 100vh;
+	display: flex;
+	background-color: var(--background);
+	overflow: hidden;
+	font-family: peace;
+}
+
+a{
+	text-decoration: none;
+}
+
+a:hover{
+	cursor: pointer;
+}
