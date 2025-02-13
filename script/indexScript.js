@@ -44,10 +44,29 @@ document.addEventListener("DOMContentLoaded", function() {
 	// Observe chaque .box
 	elements.forEach((box) => observer.observe(box));
 
+	// gestion de la copie des coordonnées quand on clique dessus
+	initCopy('aboutme-contacts-phone');
+	initCopy('aboutme-contacts-mail');
+	
 });
 
 function openProject(id)
 {
 	sessionStorage.setItem("idProject", id);
 	window.location.href = "projects.html";
+}
+
+function initCopy(elementId)
+{
+	let contact = document.getElementById(elementId);
+	contact.addEventListener("click", () => {
+    	let texte = contact.querySelector('p').innerText;
+		let tempInput = document.createElement('input');
+		tempInput.value = texte;
+		document.body.appendChild(tempInput);
+		tempInput.select();
+		document.execCommand("copy");
+
+		document.body.removeChild(tempInput);
+	});
 }

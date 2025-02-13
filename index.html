@@ -23,11 +23,11 @@
 			</a>
 			<a class="link" href="#test">
 				<div class="link-underline"></div>
-				<p class="header-links-text">test</p>
+				<p class="header-links-text">contact</p>
 			</a>
-			<a class="link" href="#exemple">
+			<a class="link" href="https://victorgignoux.github.io/portfolio-perso/">
 				<div class="link-underline"></div>
-				<p class="header-links-text">exemple</p>
+				<p class="header-links-text">explorer</p>
 			</a>
 		</div>
 	</header>
@@ -35,13 +35,33 @@
 	<!-- ----- ABOUT ME ----- -->
 	<div id="aboutme" class="container">
 		<div id="aboutme-photo">
-			<img src="">
+			<img src="img/me.jpg">
 		</div>
 
-		<div id="aboutme-text">
+		<div id="aboutme-description">
+			<div>
+				<div id="aboutme-description-title-color"></div>
+				<h1>A PROPOS DE MOI</h1>
+			</div>
 			<p>
 				Je suis étudiant en deuxième année de BUT Informatique à La Rochelle. Je développe principalement des sites web et des jeux vidéos mais je suis passionné par tous les langages et les technologies !
 			</p>
+			<div id="aboutme-contacts">
+				<div class="aboutme-contacts-container">
+					<a href="https://github.com/VictorGignoux/" target="_blank"><img src="svg/github.svg"></a>
+				</div>
+				<div class="aboutme-contacts-container">
+					<a href="https://www.linkedin.com/in/victor-gignoux-7917662b1/" target="_blank"><img src="svg/linkedin.svg"></a>
+				</div>
+				<div id="aboutme-contacts-phone" class="aboutme-contacts-container">
+					<img src="svg/phone.svg">
+					<p>07 68 86 11 58</p>
+				</div>
+				<div id="aboutme-contacts-mail" class="aboutme-contacts-container">
+					<img src="svg/mail.svg">
+					<p>victor.gignoux@laposte.net</p>
+				</div>
+			</div>
 		</div>
 	</div>
 
@@ -57,7 +77,7 @@
 			</a>
 
 			<a class="tech">
-				<img src="svg/symfony.svg" class="tech-svg">
+				<img src="svg/cpp.svg" class="tech-svg">
 			</a>
 
 			<!-- <div id="techs-separator"></div> -->
@@ -70,38 +90,49 @@
 				<img src="svg/symfony.svg" class="tech-svg">
 			</a>
 		</div>
+
+		<button id="techs-button" class="link">
+			<p>voir tout</p>
+			<div class="link-underline"></div>
+		</button>
 	</div>
 
 	<!-- ----- PROJETS ----- -->
 	<div id="projects" class="container">
-		<button id="project-ldt" class="project" onclick="openProject(0)">
-			<p class="project-description-title">Loin De Tout</p>
-			<p class="project-description-text">Jeu vidéo 3D de production et de gestion de ressources dans le but de construire une fusée.</p>
-			<div class="project-description-techs">
-				
-			</div>
-		</button>
+		<div id="projects-container">
+			<button id="project-ldt" class="project" onclick="openProject(0)">
+				<p class="project-description-title">Loin De Tout</p>
+				<p class="project-description-text">Jeu vidéo 3D de production et de gestion de ressources dans le but de construire une fusée.</p>
+				<div class="project-description-techs">
+					
+				</div>
+			</button>
 
-		<button id="project-sc"class="project" onclick="openProject(4)">
-			<p class="project-description-title">Smart Campus</p>
-			<p class="project-description-text">Outil de gestion d'un batiment et d'analyse de la température, taux de CO2 et humidité des salles.</p>
-			<div class="project-description-techs">
-				
-			</div>
-		</button>
+			<button id="project-sc"class="project" onclick="openProject(4)">
+				<p class="project-description-title">Smart Campus</p>
+				<p class="project-description-text">Outil de gestion d'un batiment et d'analyse de la température, taux de CO2 et humidité des salles.</p>
+				<div class="project-description-techs">
+					
+				</div>
+			</button>
 
-		<button id="project-sg" class="project" onclick="openProject(3)">
-			<p class="project-description-title">Soul's Guide</p>
-			<p class="project-description-text">Jeu rétro de plateformes développé dans le cadre de mes études.</p>
-			<div class="project-description-techs">
-				
-			</div>
-		</button>
+			<button id="project-sg" class="project" onclick="openProject(3)">
+				<p class="project-description-title">Soul's Guide</p>
+				<p class="project-description-text">Jeu rétro de plateformes développé dans le cadre de mes études.</p>
+				<div class="project-description-techs">
+					
+				</div>
+			</button>
+		</div>
+		<a id="techs-button" class="link" href="projects.html">
+			<p>voir tous mes projets</p>
+			<div class="link-underline"></div>
+		</a>
 	</div>
 
 	<!-- ----- FOOTER ----- -->
 	<footer class="container">
-
+		Victor Gignoux
 	</footer>
 	
 </body>

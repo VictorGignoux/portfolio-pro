@@ -15,12 +15,13 @@
 }*/
 
 html{
-	--background: 	#101B20;
-	--title: 		#23AFD0;
-	--text: 		#B6ECF7;
-	--container:	#003848;
-	--border: 		#045468;
-	--button:		#00A2C7;
+	--background: 	#1B1525;
+	--container:	#301C3B;
+	--container-interaction: #2B1535;
+	--border: 		#54346B;
+	--button:		#9A5CD0;
+	--title: 		#8457AA;
+	--text: 		#E2DDFE;
 }
 
 /* ************ FONTS *********** */
@@ -57,7 +58,7 @@ button:hover{
 
 .link{
 	position: relative;
-	font-size: 1vw;
+	font-size: 1.2vw;
 	font-family: aston;
 	color: var(--button);
 	display: flex;
