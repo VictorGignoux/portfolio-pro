@@ -1,5 +1,10 @@
 document.addEventListener("DOMContentLoaded", function() {
 
+	if(sessionStorage.getItem("idProject") != null)
+	{
+		sessionStorage.setItem("idProject", null);
+	}
+
 	// gestion des tailles des projets
 	// let projects = document.querySelectorAll('.project');
 	// projects.forEach(project => {
