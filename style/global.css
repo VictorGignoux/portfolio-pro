@@ -5,12 +5,22 @@
 
 /* ************ VARIABLES *********** */
 
-html{
+/*html{
 	--background: #0D1235;
 	--title: #6F86A7;
 	--text: #ECE6CE;
 	--lightShadow: #3C5790;
 	--darkShadow: #2D2F60;
+	--borders: #000000;
+}*/
+
+html{
+	--background: 	#101B20;
+	--title: 		#23AFD0;
+	--text: 		#B6ECF7;
+	--container:	#003848;
+	--border: 		#045468;
+	--button:		#00A2C7;
 }
 
 /* ************ FONTS *********** */
@@ -32,10 +42,8 @@ html{
 
 body{
 	width: 100vw;
-	height: 100vh;
 	display: flex;
 	background-color: var(--background);
-	overflow: hidden;
 	font-family: peace;
 }
 
@@ -43,6 +51,27 @@ a{
 	text-decoration: none;
 }
 
-a:hover{
+button:hover{
 	cursor: pointer;
+}
+
+.link{
+	position: relative;
+	font-size: 1vw;
+	font-family: aston;
+	color: var(--button);
+	display: flex;
+	justify-content: center;
+}
+
+.link-underline{
+	position: absolute;
+	width: 0vw;
+	height: 3vh;
+	border-bottom: 2px solid var(--button);
+	transition: 0.15s;
+}
+
+.link:hover .link-underline{
+	width: 100%;
 }
