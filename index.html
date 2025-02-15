@@ -10,6 +10,11 @@
 
 <body id="body">
 
+	<!-- notification -->
+	<div id="notification">
+		<p id="notification-text" class="no-start-animation">copié !</p>
+	</div>
+
 	<!-- ----- HEADER ----- -->
 	<header class="container">
 		<div id="header-name">
@@ -21,7 +26,7 @@
 				<div class="link-underline"></div>
 				<p class="header-links-text">projets</p>
 			</a>
-			<a class="link" href="#test">
+			<a class="link" href="contact.html">
 				<div class="link-underline"></div>
 				<p class="header-links-text">contact</p>
 			</a>
@@ -55,11 +60,13 @@
 				</div>
 				<div id="aboutme-contacts-phone" class="aboutme-contacts-container">
 					<img src="svg/phone.svg">
-					<p>07 68 86 11 58</p>
+					<p class="no-start-animation">07 68 86 11 58</p>
+					<img src="svg/copy.svg" alt="copy" class="aboutme-contacts-copy no-start-animation">
 				</div>
 				<div id="aboutme-contacts-mail" class="aboutme-contacts-container">
 					<img src="svg/mail.svg">
-					<p>victor.gignoux@laposte.net</p>
+					<p class="no-start-animation">victor.gignoux@laposte.net</p>
+					<img src="svg/copy.svg" alt="copy" class="aboutme-contacts-copy no-start-animation">
 				</div>
 			</div>
 		</div>
@@ -121,7 +128,7 @@
 
 			<button id="project-sc"class="project" onclick="openProject(4)">
 				<p class="project-description-title">Smart Campus</p>
-				<p class="project-description-text">Outil de gestion d'un batiment et d'analyse de la température, taux de CO2 et humidité des salles.</p>
+				<p class="project-description-text">Outil de gestion d'un campus universitaire et d'analyse des conditions environnementales des batiments et de leurs salles.</p>
 				<div class="project-description-techs">
 					<img src="svg/symfony.svg">
 					<img src="svg/docker.svg">
@@ -133,7 +140,7 @@
 
 			<button id="project-sg" class="project" onclick="openProject(3)">
 				<p class="project-description-title">Soul's Guide</p>
-				<p class="project-description-text">Jeu rétro de plateformes. </p>
+				<p class="project-description-text">Jeu vidéo rétro de plateformes. L'objectif est de finir les 4 niveaux du jeu le plus vite possible en étant poursuivi par le boss.</p>
 				<div class="project-description-techs">
 					<img src="svg/QTCreator.svg">
 					<img src="svg/cpp.svg">
@@ -150,8 +157,21 @@
 	</div>
 
 	<!-- ----- FOOTER ----- -->
-	<footer class="container">
-		Victor Gignoux
+	<footer class="container no-start-animation">
+		<div id="footer-links">
+			<a href="projects.html">projets</a>|<a href="contact.html">contact</a>|<a href="https://victorgignoux.github.io/portfolio-perso/">explorer</a>
+		</div>
+		<div id="footer-copyrights">
+			&copy; 2025 | Victor Gignoux | All rights reserved
+		</div>
+		<div id="footer-contacts">
+			<a href="https://github.com/VictorGignoux/" target="_blank">
+				<img src="svg/github.svg">
+			</a>
+			<a href="https://www.linkedin.com/in/victor-gignoux-7917662b1/" target="_blank">
+				<img src="svg/linkedin.svg">
+			</a>
+		</div>
 	</footer>
 	
 </body>

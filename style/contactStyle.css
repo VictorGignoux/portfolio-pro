@@ -1,0 +1,17 @@
+body{
+	width: 100vw;
+	height: 100vh;
+	display: flex;
+	justify-content: space-evenly;
+	align-items: center;
+	flex-direction: column;
+}
+
+img{
+	width: 15vw;
+}
+
+h1{
+	font-size: 4em;
+	color: var(--title);
+}
