@@ -10,9 +10,16 @@ html{
 	--container:	#301C3B;
 	--container-interaction: #2B1535;
 	--border: 		#54346B;
-	--button:		#9A5CD0;
+	--button:		#D1B3A1;
 	--title: 		#8457AA;
 	--text: 		#E2DDFE;
+
+	/*
+	svg1 : #D1B3A1
+	svg2 : #EFEFDF
+	svg3 : #C1A391
+	svg4 : #B19381
+	*/
 }
 
 /* ************ FONTS *********** */
