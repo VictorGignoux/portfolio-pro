@@ -30,25 +30,6 @@ header{
 	justify-content: space-between;
 }
 
-#header-params button{
-	border: 0;
-	background-color: var(--background);
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	padding: 1vh;
-	border-radius: 1vw;
-}
-
-#header-params-light{
-	width: 1.5vw;
-	fill: var(--button);
-}
-
-#header-params button:hover{
-	background-color: var(--container);
-}
-
 /* ********** ABOUT ME ********** */
 
 #aboutme{

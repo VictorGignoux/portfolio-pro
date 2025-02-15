@@ -28,9 +28,13 @@ var root = document.querySelector(':root');
 
 document.addEventListener("DOMContentLoaded", function() {
 
-	let currentTheme = sessionStorage.getItem('theme');
+	// récupération des éléments html nécessaires
+	let scrollButton = document.getElementById('scroll-button');
+	let params = document.getElementById('params');
 
 	// initialisation du theme par défaut (dark)
+	let currentTheme = sessionStorage.getItem('theme');
+
 	if(currentTheme === null)
 	{
 		sessionStorage.setItem('theme', 'dark');
@@ -41,8 +45,28 @@ document.addEventListener("DOMContentLoaded", function() {
 		setTheme(lightTheme);
 	}
 
+	// affiche le bouton de scroll
+	document.addEventListener('scroll', () => {
+		if(window.scrollY > 500)
+		{
+			scrollButton.style.transform = 'scale(1)';
+		}
+		else
+		{
+			scrollButton.style.transform = 'scale(0)';
+		}
+
+		// garde les params et le scroll button "sticky"
+		scrollButton.style.top = `calc(${window.scrollY}px + 90vh)`;
+		params.style.top = `calc(${window.scrollY}px + 4vh)`;
+	});
+
 });
 
+/**
+ * @brief Met en place le thème choisi
+ * param object theme : le thème choisi
+ */
 function setTheme(theme)
 {
 	root.style.setProperty('--background', theme.colors.background);
@@ -56,6 +80,9 @@ function setTheme(theme)
 	sessionStorage.setItem('theme', theme.name);
 }
 
+/**
+ * @brief Met en place l'autre thème que le thème courant
+ */
 function switchTheme()
 {
 	let currentTheme = sessionStorage.getItem('theme');
@@ -67,4 +94,15 @@ function switchTheme()
 	{
 		setTheme(lightTheme);
 	}
+}
+
+/**
+ * @brief Scroll doucement jusqu'en au de la page
+ */
+function scrollToTop()
+{
+	window.scroll({
+	  top: 0,
+	  behavior: "smooth",
+	});
 }

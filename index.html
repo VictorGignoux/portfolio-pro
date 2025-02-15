@@ -6,7 +6,7 @@
 	<link rel="stylesheet" type="text/css" href="style/indexStyle.css">
 	<link rel="stylesheet" type="text/css" href="style/global.css">
 	<script type="text/javascript" src="script/indexScript.js"></script>
-	<script type="text/javascript" src="script/lightMode.js"></script>
+	<script type="text/javascript" src="script/global.js"></script>
 </head>
 
 <body id="body">
@@ -15,6 +15,22 @@
 	<div id="notification">
 		<p id="notification-text" class="no-start-animation">copié !</p>
 	</div>
+
+	<!-- paramètres langue et theme -->
+	<div id="params">
+		<button onclick="switchTheme()">
+			<svg id="params-light" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.--><path d="M361.5 1.2c5 2.1 8.6 6.6 9.6 11.9L391 121l107.9 19.8c5.3 1 9.8 4.6 11.9 9.6s1.5 10.7-1.6 15.2L446.9 256l62.3 90.3c3.1 4.5 3.7 10.2 1.6 15.2s-6.6 8.6-11.9 9.6L391 391 371.1 498.9c-1 5.3-4.6 9.8-9.6 11.9s-10.7 1.5-15.2-1.6L256 446.9l-90.3 62.3c-4.5 3.1-10.2 3.7-15.2 1.6s-8.6-6.6-9.6-11.9L121 391 13.1 371.1c-5.3-1-9.8-4.6-11.9-9.6s-1.5-10.7 1.6-15.2L65.1 256 2.8 165.7c-3.1-4.5-3.7-10.2-1.6-15.2s6.6-8.6 11.9-9.6L121 121 140.9 13.1c1-5.3 4.6-9.8 9.6-11.9s10.7-1.5 15.2 1.6L256 65.1 346.3 2.8c4.5-3.1 10.2-3.7 15.2-1.6zM160 256a96 96 0 1 1 192 0 96 96 0 1 1 -192 0zm224 0a128 128 0 1 0 -256 0 128 128 0 1 0 256 0z"/></svg>
+		</button>
+		<div id="params-separator"></div>
+		<button>
+			<p id="params-lang">EN</p>
+		</button>
+	</div>
+
+	<!-- bouton pour remonter en haut de la page -->
+	<button id="scroll-button" class="no-start-animation" onclick="scrollToTop()">
+		<img src="svg/topArrow.svg" class="no-start-animation">
+	</button>
 
 	<!-- ----- HEADER ----- -->
 	<header class="container">
@@ -31,16 +47,10 @@
 				<div class="link-underline"></div>
 				<p class="header-links-text">contact</p>
 			</a>
-			<a class="link" href="https://victorgignoux.github.io/portfolio-perso/">
+			<a class="link" href="contact.html">
 				<div class="link-underline"></div>
 				<p class="header-links-text">explorer</p>
 			</a>
-		</div>
-
-		<div id="header-params">
-			<button onclick="switchTheme()">
-				<svg id="header-params-light" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.--><path d="M361.5 1.2c5 2.1 8.6 6.6 9.6 11.9L391 121l107.9 19.8c5.3 1 9.8 4.6 11.9 9.6s1.5 10.7-1.6 15.2L446.9 256l62.3 90.3c3.1 4.5 3.7 10.2 1.6 15.2s-6.6 8.6-11.9 9.6L391 391 371.1 498.9c-1 5.3-4.6 9.8-9.6 11.9s-10.7 1.5-15.2-1.6L256 446.9l-90.3 62.3c-4.5 3.1-10.2 3.7-15.2 1.6s-8.6-6.6-9.6-11.9L121 391 13.1 371.1c-5.3-1-9.8-4.6-11.9-9.6s-1.5-10.7 1.6-15.2L65.1 256 2.8 165.7c-3.1-4.5-3.7-10.2-1.6-15.2s6.6-8.6 11.9-9.6L121 121 140.9 13.1c1-5.3 4.6-9.8 9.6-11.9s10.7-1.5 15.2 1.6L256 65.1 346.3 2.8c4.5-3.1 10.2-3.7 15.2-1.6zM160 256a96 96 0 1 1 192 0 96 96 0 1 1 -192 0zm224 0a128 128 0 1 0 -256 0 128 128 0 1 0 256 0z"/></svg>
-			</button>
 		</div>
 	</header>
 
@@ -56,7 +66,7 @@
 				<h1>A PROPOS DE MOI</h1>
 			</div>
 			<p>
-				Je suis étudiant en BUT Informatique à La Rochelle. Je développe principalement des sites web et des jeux vidéos. C'est sûr Scratch que j'ai découvert pour la première fois la beauté de la programmation et que j'ai réalisé l'immense source de création et d'innovation que cela apportait.
+				Je suis étudiant en BUT Informatique à La Rochelle. Je développe principalement des sites web et des jeux vidéos. C'est sûr Scratch que j'ai découvert pour la première fois la beauté de la programmation et que j'ai réalisé l'immense source de création et d'innovation que cela représentait.
 			</p>
 			<div id="aboutme-contacts">
 				<div class="aboutme-contacts-container">
@@ -168,7 +178,7 @@
 	<!-- ----- FOOTER ----- -->
 	<footer class="container no-start-animation">
 		<div id="footer-links">
-			<a href="projects.html">projets</a>|<a href="contact.html">contact</a>|<a href="https://victorgignoux.github.io/portfolio-perso/">explorer</a>
+			<a href="projects.html">projets</a>|<a href="contact.html">contact</a>|<a href="contact.html">explorer</a>
 		</div>
 		<div id="footer-copyrights">
 			&copy; 2025 | Victor Gignoux | All rights reserved

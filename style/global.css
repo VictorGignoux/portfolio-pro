@@ -55,6 +55,8 @@ button:hover{
 	cursor: pointer;
 }
 
+/* boutons */
+
 .link{
 	position: relative;
 	font-size: 1.2vw;
@@ -76,6 +78,8 @@ button:hover{
 .link:hover .link-underline{
 	width: 100%;
 }
+
+/* notification */
 
 #notification{
 	position: absolute;
@@ -102,4 +106,67 @@ button:hover{
 	font-size: 1.2vw;
 	top: 7vh;
 	transition: 0.3s !important;
+}
+
+/* paramètres langue et theme */
+
+#params{
+	position: fixed;
+	left: 92vw;
+	top: 4vh;
+	width: 5.5vw;
+	height: 5vh;
+	z-index: 10;
+	display: flex;
+	justify-content: space-evenly;
+	align-items: center;
+	background-color: var(--button);
+	border-radius: 1vw;
+}
+
+#params button{
+	border: 0;
+	background-color: var(--button);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+#params-light{
+	width: 1.3vw;
+	fill: var(--title);
+	transition: 0.2s !important;
+}
+
+#params-lang{
+	color: var(--background);
+	font-size: 1vw;
+	font-family: aston;
+}
+
+#params-separator{
+	height: 55%;
+	border: 0.1vw solid var(--background);
+}
+
+#params-light:hover{
+	fill: var(--text);
+}
+
+#params-lang:hover{
+	color: var(--text);
+}
+
+/* flèche de retour en haut de page */
+
+#scroll-button{
+	z-index: 10;
+	position: fixed;
+	left: 95vw;
+	border: 0;
+	background-color: transparent;
+	width: 3vw;
+	height: 3vw;
+	transform: scale(0);
+	transition: transform 0.3s;
 }
