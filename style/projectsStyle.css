@@ -26,25 +26,20 @@ body{
 }
 
 .description-title{
-	display: flex;
-	flex-direction: column;
-	width: 100%;
-}
-
-.description-title-first{
 	font-size: 2vw;
 	color: var(--title);
 }
 
-.description-title-sub{
-	font-size: 1.2vw;
-	color: var(--text);
+.description-techs{
 	display: flex;
+	justify-content: center;
 	align-items: center;
 }
 
-.description-title-sub *{
-	margin-right: 1vh;
+.description-techs img{
+	max-width: 3vw;
+	max-height: 3vw;
+	margin-right: 1.6vw;
 }
 
 .description-text{

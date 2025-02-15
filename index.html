@@ -44,7 +44,7 @@
 				<h1>A PROPOS DE MOI</h1>
 			</div>
 			<p>
-				Je suis étudiant en deuxième année de BUT Informatique à La Rochelle. Je développe principalement des sites web et des jeux vidéos mais je suis passionné par tous les langages et les technologies !
+				Je suis étudiant en BUT Informatique à La Rochelle. Je développe principalement des sites web et des jeux vidéos. C'est sûr Scratch que j'ai découvert pour la première fois la beauté de la programmation et que j'ai réalisé l'immense source de création et d'innovation que cela apportait.
 			</p>
 			<div id="aboutme-contacts">
 				<div class="aboutme-contacts-container">
@@ -67,31 +67,39 @@
 
 	<!-- ----- TECHS ----- -->
 	<div id="techs" class="container">
-		<div id="techs-container">
-			<a href="https://symfony.com/" target="_blank" class="tech">
+		<div class="techs-container">
+			<a class="tech" href="https://symfony.com/" target="_blank">
 				<img src="svg/symfony.svg" class="tech-svg">
 			</a>
 
-			<a class="tech">
-				<img src="svg/symfony.svg" class="tech-svg">
+			<a class="tech" href="https://www.qt.io/" target="_blank">
+				<img src="svg/QTCreator.svg" class="tech-svg">
 			</a>
 
-			<a class="tech">
-				<img src="svg/cpp.svg" class="tech-svg">
-			</a>
-
-			<!-- <div id="techs-separator"></div> -->
-
-			<a class="tech">
-				<img src="svg/symfony.svg" class="tech-svg">
-			</a>
-
-			<a class="tech">
-				<img src="svg/symfony.svg" class="tech-svg">
+			<a class="tech" href="https://www.oracle.com/" target="_blank">
+				<img src="svg/oracle.svg" class="tech-svg">
 			</a>
 		</div>
 
-		<button id="techs-button" class="link">
+		<div class="techs-container no-start-animation" id="techs-container-hidden">
+			<a class="tech no-start-animation" href="https://www.docker.com/" target="_blank">
+				<img src="svg/docker.svg" class="tech-svg">
+			</a>
+
+			<a class="tech no-start-animation" href="https://redis.io/" target="_blank">
+				<img src="svg/redis.svg" class="tech-svg">
+			</a>
+
+			<a class="tech no-start-animation" href="https://react.dev/" target="_blank">
+				<img src="svg/reactjs.svg" class="tech-svg">
+			</a>
+
+			<a class="tech no-start-animation" href="https://unity.com/" target="_blank">
+				<img src="svg/unity.svg" class="tech-svg">
+			</a>
+		</div>
+
+		<button id="techs-button" class="link" onclick="hideAndShowHiddenTechs()">
 			<p>voir tout</p>
 			<div class="link-underline"></div>
 		</button>
@@ -102,9 +110,12 @@
 		<div id="projects-container">
 			<button id="project-ldt" class="project" onclick="openProject(0)">
 				<p class="project-description-title">Loin De Tout</p>
-				<p class="project-description-text">Jeu vidéo 3D de production et de gestion de ressources dans le but de construire une fusée.</p>
+				<p class="project-description-text">Jeu vidéo 3D de production et de gestion de ressources. Le but est de construire une fusée pour s'évader de la planète.</p>
 				<div class="project-description-techs">
-					
+					<img src="svg/unity.svg">
+				</div>
+				<div class="project-description-image">
+					<img src="img/ldt.png">
 				</div>
 			</button>
 
@@ -112,15 +123,23 @@
 				<p class="project-description-title">Smart Campus</p>
 				<p class="project-description-text">Outil de gestion d'un batiment et d'analyse de la température, taux de CO2 et humidité des salles.</p>
 				<div class="project-description-techs">
-					
+					<img src="svg/symfony.svg">
+					<img src="svg/docker.svg">
+				</div>
+				<div class="project-description-image">
+					<img src="images_projets/sc2.png">
 				</div>
 			</button>
 
 			<button id="project-sg" class="project" onclick="openProject(3)">
 				<p class="project-description-title">Soul's Guide</p>
-				<p class="project-description-text">Jeu rétro de plateformes développé dans le cadre de mes études.</p>
+				<p class="project-description-text">Jeu rétro de plateformes. </p>
 				<div class="project-description-techs">
-					
+					<img src="svg/QTCreator.svg">
+					<img src="svg/cpp.svg">
+				</div>
+				<div class="project-description-image">
+					<img src="img/soulsguide.png">
 				</div>
 			</button>
 		</div>

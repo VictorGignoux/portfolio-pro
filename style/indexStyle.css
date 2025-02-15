@@ -3,7 +3,7 @@ body{
 	align-items: center;
 }
 
-body *{
+body *:not(.no-start-animation){
 	opacity: 0;
 	transition: transform 0.4s;
 	transform: scale(0.5);
@@ -20,7 +20,7 @@ header{
 }
 
 #header-name{
-	font-size: 4em;
+	font-size: 5em;
 	color: var(--title);
 }
 
@@ -57,6 +57,7 @@ header{
 	display: flex;
 	flex-direction: column;
 	justify-content: space-around;
+	/*line-height: 3.6vh;*/ /* espacer les lignes */
 }
 
 #aboutme-description h1{
@@ -84,7 +85,7 @@ header{
 	overflow: hidden;
 	padding: 1.5vh 1vw;
 	border-radius: 1em;
-	transition: 0.3s;
+	transition: 0.3s !important;
 	display: flex;
 	align-items: center;
 	white-space: nowrap;
@@ -114,14 +115,14 @@ header{
 	width: 100%;
 	height: 40vh;
 	display: flex;
-	justify-content: center;
+	justify-content: flex-start;
 	flex-direction: column;
 	align-items: center;
 }
 
-#techs-container{
-	width: 45%;
-	height: 50%;
+.techs-container{
+	width: 28%;
+	height: 40%;
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
@@ -129,17 +130,22 @@ header{
 	overflow: hidden;
 }
 
+#techs-container-hidden{
+	width: 40%;
+	height: 0%;
+	transition: 0.3s !important;
+}
+
 .tech{
-	width: 20%;
+	width: 5vw;
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	padding: 1vw;
+	border-radius: 1em;
+	transform: scale(0);
+	transition: transform 0.4s; /* doesn't need important */
 }
-
-/*#techs-separator{
-	height: 50%;
-	border-left: 3px solid var(--border);
-}*/
 
 .tech-svg{
 	max-height: 6em;
@@ -151,13 +157,18 @@ header{
 	border: 0;
 }
 
+.tech:hover{
+	background-color: var(--container);
+}
+
 /* ********** PROJETS ********** */
 
 #projects{
-	height: 100vh;
+	height: 80vh;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
+	justify-content: space-evenly;
 }
 
 #projects-container{
@@ -170,15 +181,15 @@ header{
 
 .project{
 	width: 30%;
-	height: 80%;
+	height: 100%;
 	overflow: hidden;
 	background-color: var(--container);
 	border-radius: 3vw;
-	transition: 0.2s;
+	transition: 0.2s !important;
 	display: flex;
 	flex-direction: column;
-	justify-content: space-around;
 	align-items: center;
+	overflow: hidden;
 	border: 3px solid var(--border);
 	font-family: peace;
 }
@@ -197,7 +208,7 @@ header{
 
 .project-description-title{
 	width: 80%;
-	height: 15%;
+	height: 20%;
 	display: flex;
 	align-items: center;
 	font-size: 3em;
@@ -206,7 +217,7 @@ header{
 
 .project-description-text{
 	width: 80%;
-	height: 30%;
+	height: 20%;
 	display: flex;
 	font-size: 2em;
 	font-family: aston;
@@ -217,11 +228,43 @@ header{
 .project-description-techs{
 	width: 80%;
 	height: 20%;
+	display: flex;
+	align-items: center;
+}
+
+.project-description-techs img{
+	max-width: 10%;
+	margin-right: 1vw;
+}
+
+.project-description-image{
+	width: 100%;
+	height: 40%;
+	transition: 0.3s !important;
+	position: absolute;
+	bottom: 0%;
+}
+
+.project-description-image img{
+	object-fit: cover;
+	height: 100%;
+	width: 100%;
+	transition: 0.3s;
 }
 
 .project:hover{
 	background-color: var(--container-interaction);
 }
+
+/* animation d'aumentation des images des projets */
+/*.project:hover .project-description-image{
+	height: 80%;
+}*/
+
+/*
+.project:hover .project-description-image img{
+	width: 160%;
+}*/
 
 /*.project:hover .project-description{
 	opacity: 0;
@@ -238,4 +281,5 @@ footer{
 	align-items: center;
 	color: var(--text);
 	font-family: aston;
+	margin-top: 20vh;
 }

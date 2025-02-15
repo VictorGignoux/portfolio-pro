@@ -1,3 +1,5 @@
+let isHiddenTechsShown = false;
+
 document.addEventListener("DOMContentLoaded", function() {
 
 	if(sessionStorage.getItem("idProject") != null)
@@ -27,7 +29,7 @@ document.addEventListener("DOMContentLoaded", function() {
 	// });
 
 
-	const elements = document.querySelectorAll('*');
+	const elements = document.querySelectorAll('*:not(.no-start-animation)');
 
 	// Crée un observer
 	const observer = new IntersectionObserver((entries) => {
@@ -69,4 +71,32 @@ function initCopy(elementId)
 
 		document.body.removeChild(tempInput);
 	});
+}
+
+function hideAndShowHiddenTechs()
+{
+	let hiddenTechs = document.getElementById('techs-container-hidden');
+	let hiddenTechsElements = hiddenTechs.querySelectorAll('.tech');
+	let techsButton = document.getElementById('techs-button').querySelector('p');
+	if(isHiddenTechsShown)
+	{
+		hiddenTechs.style.height = "0%";
+		isHiddenTechsShown = false;
+		techsButton.innerText = "voir tout";
+
+		hiddenTechsElements.forEach(element => {
+			element.style.transform = 'scale(0)';
+		});
+	}
+	else
+	{
+		hiddenTechs.style.height = "40%";
+		isHiddenTechsShown = true;
+		techsButton.innerText = "cacher";
+
+		hiddenTechsElements.forEach(element => {
+			element.style.transform = 'scale(1)';
+		});
+	}
+	console.log(hiddenTechs, isHiddenTechsShown);
 }

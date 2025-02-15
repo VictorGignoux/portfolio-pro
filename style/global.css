@@ -70,7 +70,7 @@ button:hover{
 	width: 0vw;
 	height: 3vh;
 	border-bottom: 2px solid var(--button);
-	transition: 0.15s;
+	transition: 0.15s !important;
 }
 
 .link:hover .link-underline{
