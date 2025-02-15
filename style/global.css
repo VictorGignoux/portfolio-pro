@@ -5,15 +5,6 @@
 
 /* ************ VARIABLES *********** */
 
-/*html{
-	--background: #0D1235;
-	--title: #6F86A7;
-	--text: #ECE6CE;
-	--lightShadow: #3C5790;
-	--darkShadow: #2D2F60;
-	--borders: #000000;
-}*/
-
 html{
 	--background: 	#1B1525;
 	--container:	#301C3B;
@@ -46,6 +37,7 @@ body{
 	display: flex;
 	background-color: var(--background);
 	font-family: peace;
+	overflow-x: hidden;
 }
 
 a{
@@ -63,13 +55,14 @@ button:hover{
 	color: var(--button);
 	display: flex;
 	justify-content: center;
+	transition: 0.2s !important;
 }
 
 .link-underline{
 	position: absolute;
 	width: 0vw;
 	height: 3vh;
-	border-bottom: 2px solid var(--button);
+	border-bottom: 0.3vh solid var(--button);
 	transition: 0.15s !important;
 }
 
@@ -83,8 +76,8 @@ button:hover{
 	left: 50vw;
 	transform: translate(-50%, -50%) !important;
 	z-index: 10;
-	width: 7vw;
-	height: 7vh;
+	width: 6vw;
+	height: 6vh;
 	overflow: hidden;
 }
 
@@ -97,9 +90,9 @@ button:hover{
 	position: absolute;
 	background-color: var(--button);
 	color: var(--background);
-	border-radius: 0.5em;
+	border-radius: 1vw;
 	font-family: aston;
-	font-size: 2em;
+	font-size: 1.2vw;
 	top: 7vh;
 	transition: 0.3s !important;
 }
