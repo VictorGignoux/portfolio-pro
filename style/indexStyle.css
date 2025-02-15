@@ -1,0 +1,305 @@
+body{
+	flex-direction: column;
+	align-items: center;
+}
+
+body *:not(.no-start-animation){
+	opacity: 0;
+	transition: transform 0.4s;
+	transform: scale(0.5);
+}
+
+/* ********** HEADER ********** */
+
+header{
+	width: 100%;
+	height: 20vh;
+	display: flex;
+	justify-content: space-evenly;
+	align-items: center;
+}
+
+#header-name{
+	font-size: 3.5vw;
+	color: var(--title);
+}
+
+#header-links{
+	width: 20%;
+	display: flex;
+	justify-content: space-between;
+}
+
+#header-params button{
+	border: 0;
+	background-color: var(--background);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 1vh;
+	border-radius: 1vw;
+}
+
+#header-params-light{
+	width: 1.5vw;
+	fill: var(--button);
+}
+
+#header-params button:hover{
+	background-color: var(--container);
+}
+
+/* ********** ABOUT ME ********** */
+
+#aboutme{
+	width: 100%;
+	height: 85vh;
+	display: flex;
+	justify-content: space-evenly;
+	align-items: center;
+}
+
+#aboutme-photo img{
+	width: 23vw;
+	height: 23vw;
+	object-fit: cover;
+	border-radius: 3vw;
+	box-shadow: -4vw -3vw var(--border);
+}
+
+#aboutme-description{
+	width: 40vw;
+	height: 60%;
+	font-size: 1.2vw;
+	font-family: aston;
+	color: var(--text);
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	/*line-height: 3.6vh;*/ /* espacer les lignes */
+}
+
+#aboutme-description h1{
+	font-family: peace;
+}
+
+#aboutme-description-title-color{
+	position: absolute;
+	top: 2.5vh;
+	left: 2vw;
+	width: 62%;
+	height: 85%;
+	background-color: var(--container);
+	border-radius: 1.2vw;
+}
+
+#aboutme-contacts{
+	display: flex;
+	align-items: center;
+	width: 100%;
+}
+
+.aboutme-contacts-container{
+	width: 4.8%;
+	overflow: hidden;
+	padding: 1.5vh 1vw;
+	border-radius: 1em;
+	transition: 0.3s !important;
+	display: flex;
+	align-items: center;
+	white-space: nowrap;
+	gap: 0.8em;
+}
+
+.aboutme-contacts-copy{
+	max-width: 1vw;
+}
+
+#aboutme-contacts-mail:hover{
+	width: 50%;
+	background-color: var(--container);
+	cursor: pointer;
+}
+
+#aboutme-contacts-phone:hover{
+	width: 33%;
+	background-color: var(--container);
+	cursor: pointer;
+}
+
+#aboutme-contacts img{
+	width: 1.6em;
+	max-height: 1.6em;
+}
+
+/* ********** TECHS ********** */
+
+#techs{
+	width: 100%;
+	height: 40vh;
+	display: flex;
+	justify-content: flex-start;
+	flex-direction: column;
+	align-items: center;
+}
+
+.techs-container{
+	width: 22%;
+	height: 35%;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	flex-wrap: wrap;
+	overflow: hidden;
+}
+
+#techs-container-hidden{
+	width: 32%;
+	height: 0%;
+	transition: 0.3s !important;
+}
+
+.tech{
+	width: 4vw;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 1vw;
+	border-radius: 1vw;
+	transform: scale(0);
+	transition: transform 0.4s; /* doesn't need important */
+}
+
+.tech-svg{
+	max-height: 4vw;
+	max-width: 4vw;
+}
+
+#techs-button{
+	background-color: var(--background);
+	border: 0;
+}
+
+.tech:hover{
+	background-color: var(--container);
+}
+
+/* ********** PROJETS ********** */
+
+#projects{
+	height: 80vh;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-evenly;
+}
+
+#projects-container{
+	width: 100vw;
+	height: 80%;
+	display: flex;
+	justify-content: space-evenly;
+	align-items: center;
+}
+
+.project{
+	width: 28%;
+	height: 100%;
+	overflow: hidden;
+	background-color: var(--container);
+	border-radius: 3vw;
+	transition: 0.2s !important;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	overflow: hidden;
+	border: 0.2vw solid var(--border);
+	font-family: peace;
+}
+
+.project-description-title{
+	width: 80%;
+	height: 20%;
+	display: flex;
+	align-items: center;
+	font-size: 2.2vw;
+	color: var(--title);
+}
+
+.project-description-text{
+	width: 80%;
+	height: 15%;
+	display: flex;
+	font-size: 1.2vw;
+	font-family: aston;
+	color: var(--text);
+	text-align: start;
+}
+
+.project-description-techs{
+	width: 80%;
+	height: 20%;
+	display: flex;
+	align-items: center;
+}
+
+.project-description-techs img{
+	max-width: 10%;
+	margin-right: 1vw;
+}
+
+.project-description-image{
+	width: 100%;
+	height: 45%;
+	transition: 0.3s !important;
+	position: absolute;
+	bottom: 0%;
+}
+
+.project-description-image img{
+	object-fit: cover;
+	height: 100%;
+	width: 100%;
+	transition: 0.3s;
+}
+
+.project:hover{
+	background-color: var(--container-interaction);
+}
+
+/* ********** FOOTER ********** */
+
+footer{
+	width: 100%;
+	height: 15vh;
+	background: var(--container);
+	display: flex;
+	justify-content: space-evenly;
+	align-items: center;
+	color: var(--text);
+	font-family: aston;
+	margin-top: 10vh;
+	font-size: 1vw;
+}
+
+#footer-links{
+	font-family: aston;
+	width: 15%;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+#footer-links *{
+	color: var(--text);
+	transition: 0.1s;
+}
+
+#footer-links a:hover{
+	color: var(--button);
+}
+
+#footer-contacts img{
+	width: 1.4vw;
+	margin-right: 1vw;
+}

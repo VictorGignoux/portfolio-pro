@@ -6,11 +6,20 @@
 /* ************ VARIABLES *********** */
 
 html{
-	--background: #0D1235;
-	--title: #6F86A7;
-	--text: #ECE6CE;
-	--lightShadow: #3C5790;
-	--darkShadow: #2D2F60;
+	--background: 	#1B1525;
+	--container:	#301C3B;
+	--container-interaction: #2B1535;
+	--border: 		#54346B;
+	--button:		#D1B3A1;
+	--title: 		#8457AA;
+	--text: 		#E2DDFE;
+
+	/*
+	svg1 : #D1B3A1
+	svg2 : #EFEFDF
+	svg3 : #C1A391
+	svg4 : #B19381
+	*/
 }
 
 /* ************ FONTS *********** */
@@ -32,17 +41,65 @@ html{
 
 body{
 	width: 100vw;
-	height: 100vh;
 	display: flex;
 	background-color: var(--background);
-	overflow: hidden;
 	font-family: peace;
+	overflow-x: hidden;
 }
 
 a{
 	text-decoration: none;
 }
 
-a:hover{
+button:hover{
 	cursor: pointer;
+}
+
+.link{
+	position: relative;
+	font-size: 1.2vw;
+	font-family: aston;
+	color: var(--button);
+	display: flex;
+	justify-content: center;
+	transition: 0.2s !important;
+}
+
+.link-underline{
+	position: absolute;
+	width: 0vw;
+	height: 3vh;
+	border-bottom: 0.3vh solid var(--button);
+	transition: 0.15s !important;
+}
+
+.link:hover .link-underline{
+	width: 100%;
+}
+
+#notification{
+	position: absolute;
+	top: 50vh;
+	left: 50vw;
+	transform: translate(-50%, -50%) !important;
+	z-index: 10;
+	width: 6vw;
+	height: 6vh;
+	overflow: hidden;
+}
+
+#notification-text{
+	width: 100%;
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: absolute;
+	background-color: var(--button);
+	color: var(--background);
+	border-radius: 1vw;
+	font-family: aston;
+	font-size: 1.2vw;
+	top: 7vh;
+	transition: 0.3s !important;
 }

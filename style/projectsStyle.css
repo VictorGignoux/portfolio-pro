@@ -1,3 +1,7 @@
+body{
+	height: 100vh;
+}
+
 /* ************ DESCRIPTION DES PROJETS *********** */
 
 #descriptions{
@@ -22,25 +26,20 @@
 }
 
 .description-title{
-	display: flex;
-	flex-direction: column;
-	width: 100%;
-}
-
-.description-title-first{
 	font-size: 2vw;
 	color: var(--title);
 }
 
-.description-title-sub{
-	font-size: 1.2vw;
-	color: var(--text);
+.description-techs{
 	display: flex;
+	justify-content: center;
 	align-items: center;
 }
 
-.description-title-sub *{
-	margin-right: 1vh;
+.description-techs img{
+	max-width: 3vw;
+	max-height: 3vw;
+	margin-right: 1.6vw;
 }
 
 .description-text{
@@ -75,7 +74,7 @@
 }
 
 .description-button:hover{
-	box-shadow: 0 0 1em var(--lightShadow);
+	box-shadow: 0 0 1em var(--button);
 	cursor: pointer;
 }
 
@@ -119,8 +118,8 @@
 	height: 70vh;
 	user-select: none;
 	color: white;
-	background-color: var(--darkShadow);
-	border-radius: 20px;
+	background-color: var(--container);
+	border-radius: 1vw;
 	transition: 0.3s;
 	overflow: hidden;
 }
@@ -137,7 +136,7 @@
 }
 
 .project:hover{
-	box-shadow: 0 0 2em var(--darkShadow);
+	box-shadow: 0 0 2em var(--border);
 	cursor: pointer;
 }
 
@@ -193,7 +192,7 @@
 }
 
 .project-button-swipe svg{
-	fill: var(--darkShadow);
+	fill: var(--container);
 }
 
 .project-button-swipe:hover{
@@ -218,7 +217,7 @@
 .point{
 	width: 0.7vw;
 	height: 0.7vw;
-	background-color: var(--darkShadow);
+	background-color: var(--container);
 	border: 0;
 	border-radius: 100%;
 	margin: 1.4vh;
@@ -234,7 +233,7 @@
 	font-family: aston;
 	font-size: 1.1vw;
 	color: white;
-	background-color: var(--lightShadow);
+	background-color: var(--button);
 	border-radius: 0.6vw;
 	z-index: 10;
 	white-space: nowrap;
@@ -243,7 +242,7 @@
 }
 
 .currentPoint{
-	background-color: var(--lightShadow);
+	background-color: var(--button);
 }
 
 .point:hover{
@@ -257,37 +256,10 @@
 /* *************** BOUTON POUR FEMER LA FENÊTRE ************ */
 
 #closePageButton{
-	font-family: aston;
-	font-size: 1vw;
-	z-index: 10;
+	z-index: 4;
 	position: fixed;
 	top: 3vh;
-	left: 1.6vw;
-	border: 0;
-	background-color: var(--bg);
-	color: var(--text);
-	width: 6vw;
-	height: 5vh;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-}
-
-#closePageButtonText{
-	z-index: 12;
-}
-
-#closePageButtonUnderline{
-	z-index: 1;
-	position: absolute;
-	width: 0vw;
-	height: 3vh;
-	border-bottom: 2px solid var(--text);
-	transition: 0.3s;
-}
-
-#closePageButton:hover #closePageButtonUnderline{
-	width: 4vw;
+	left: 1.5vw;
 }
 
 video{

@@ -5,7 +5,11 @@ var currentProjectId = MAX_PROJECT_ID-1;
 document.addEventListener("DOMContentLoaded", () => {
 
 	// initialisation des projets
-	swipeProject(currentProjectId);
+	let idProject = sessionStorage.getItem("idProject");
+	if(idProject != null)
+		swipeProject(idProject);
+	else
+		swipeProject(currentProjectId);
 
 	// défilement des projets avec le scroll
 	let page = document.getElementById('body');
