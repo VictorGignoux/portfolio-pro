@@ -32,6 +32,21 @@ document.addEventListener("DOMContentLoaded", () => {
 	    setTimeout(() => isScrolling = false, 150);
 	});
 
+	// défilement des projets avec les flèches
+	document.addEventListener('keydown', (event) => {
+		const arrow = event.key;
+		if(arrow === "ArrowDown" && currentProjectId > 0)
+		{
+			currentProjectId -= 1;
+			swipeProject(currentProjectId);
+		}
+		else if(arrow === "ArrowUp" && currentProjectId < MAX_PROJECT_ID-1)
+		{
+			currentProjectId += 1;
+			swipeProject(currentProjectId);
+		}
+	});
+
 	// lancement des vidéos au survol des projets
 	let projects = document.querySelectorAll('.project');
 	projects.forEach(project => {
