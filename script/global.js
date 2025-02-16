@@ -1,4 +1,4 @@
-let darkTheme = {
+const darkTheme = {
 	name: "dark",
 	colors: {
 		background: "#1B1525",
@@ -11,7 +11,7 @@ let darkTheme = {
 	}
 };
 
-let lightTheme = {
+const lightTheme = {
 	name: "light",
 	colors: {
 		background: "#F4FAFE",
@@ -24,16 +24,18 @@ let lightTheme = {
 	}
 };
 
-var root = document.querySelector(':root');
+const root = document.querySelector(':root');
 
 document.addEventListener("DOMContentLoaded", function() {
 
-	// récupération des éléments html nécessaires
-	let scrollButton = document.getElementById('scroll-button');
-	let params = document.getElementById('params');
+	/************** DECLARATIONS HTML ****************/
+	const scrollButton = document.getElementById('scroll-button');
+	const params = document.getElementById('params');
+
+	/************* INIT ********************/
 
 	// initialisation du theme par défaut (dark)
-	let currentTheme = sessionStorage.getItem('theme');
+	const currentTheme = sessionStorage.getItem('theme');
 
 	if(currentTheme === null)
 	{
@@ -61,6 +63,33 @@ document.addEventListener("DOMContentLoaded", function() {
 		params.style.top = `calc(${window.scrollY}px + 4vh)`;
 	});
 
+	// animation d'apparition des éléments
+	const elements = document.querySelectorAll('*:not(.no-start-animation)');
+
+	const observer = new IntersectionObserver((entries) => {
+	  entries.forEach((entry) => {
+	  	// affiche les éléments quand il entre dans la partie visible de la page
+	    if (entry.isIntersecting) 
+	    {
+	      	entry.target.style.transform = "scale(1)";
+	     	entry.target.style.opacity = "1";
+	    }
+	    // pour répéter l'animation à chaque fois sans reload la page
+	    /*else
+	    {
+	    	if(entry.target.className === "project")
+	    	{
+	    		entry.target.style.transform = "scale(0)";
+	      		entry.target.style.opacity = "0";
+	    	}
+	    }*/
+	  });
+	}, {
+	  	threshold: 0.1, // Déclenche quand 10% de l'élément est visible
+	});
+
+	elements.forEach((element) => observer.observe(element));
+
 });
 
 /**
@@ -85,7 +114,7 @@ function setTheme(theme)
  */
 function switchTheme()
 {
-	let currentTheme = sessionStorage.getItem('theme');
+	const currentTheme = sessionStorage.getItem('theme');
 	if(currentTheme === 'light')
 	{
 		setTheme(darkTheme);

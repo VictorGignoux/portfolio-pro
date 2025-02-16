@@ -35,12 +35,12 @@ document.addEventListener("DOMContentLoaded", () => {
 	// défilement des projets avec les flèches
 	document.addEventListener('keydown', (event) => {
 		const arrow = event.key;
-		if(arrow === "ArrowDown" && currentProjectId > 0)
+		if((arrow === "ArrowDown" || arrow === "ArrowRight") && currentProjectId > 0)
 		{
 			currentProjectId -= 1;
 			swipeProject(currentProjectId);
 		}
-		else if(arrow === "ArrowUp" && currentProjectId < MAX_PROJECT_ID-1)
+		else if((arrow === "ArrowUp" || arrow === "ArrowLeft") && currentProjectId < MAX_PROJECT_ID-1)
 		{
 			currentProjectId += 1;
 			swipeProject(currentProjectId);
@@ -68,7 +68,10 @@ document.addEventListener("DOMContentLoaded", () => {
 	});
 });
 
-// passe au projet suivant jusqu'à atteindre le projet dont l'id est passé en paramètre
+/**
+ * @brief passe au projet suivant jusqu'à atteindre le projet dont l'id est passé en paramètre
+ * @param int id : l'id du projet séléctionné
+ */
 function swipeProject(id)
 {
 	// augmente ou diminue l'id du projet courant en fontion de l'id passé en paramètre
@@ -80,7 +83,7 @@ function swipeProject(id)
 	let projects = document.querySelectorAll('.project');
 
 	//on cache la description actuelle
-	var currentDescription = document.querySelector('.currentDescription');
+	let currentDescription = document.querySelector('.currentDescription');
 	if(currentDescription)
 		currentDescription.classList.remove('currentDescription');
 
@@ -103,7 +106,7 @@ function swipeProject(id)
 			project.style.opacity = '1';
 
 			// affichage de la description correspondante
-			var newCurrentDescription = document.getElementById(`description-${project.id}`);
+			let newCurrentDescription = document.getElementById(`description-${project.id}`);
 			if(newCurrentDescription)
 				newCurrentDescription.classList.add('currentDescription');
 		}
@@ -171,4 +174,27 @@ function swipeImage(projectId, direction)
 		let rightArrow = project.querySelector('.rightArrow');
 		rightArrow.style.width = '2vw';
 	}
+}
+
+function compressOrExpandImages(idProject)
+{
+	let project = document.getElementById(idProject);
+	let projectImages = project.querySelectorAll('.project-images-image');
+	let projectButtonImage = project.querySelector('.project-button-expand-image');
+	projectImages.forEach(image => {
+		let styles = getComputedStyle(image);
+		let objectFitValue = styles.getPropertyValue('object-fit');
+		if(objectFitValue === "cover")
+		{
+			// compressing
+			image.style.objectFit = "contain";
+			projectButtonImage.src = "svg/expand.svg";
+		}
+		else if(objectFitValue === "contain")
+		{
+			// expanding
+			image.style.objectFit = "cover";
+			projectButtonImage.src = "svg/compress.svg";
+		}
+	});
 }

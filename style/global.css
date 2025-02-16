@@ -47,6 +47,12 @@ body{
 	overflow-x: hidden;
 }
 
+body *:not(.no-start-animation){
+	opacity: 0;
+	transition: transform 0.4s;
+	transform: scale(0.5);
+}
+
 a{
 	text-decoration: none;
 }

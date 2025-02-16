@@ -20,9 +20,9 @@ body{
 	flex-direction: column;
 	justify-content: space-between;
 	align-items: center;
-	opacity: 0;
+	opacity: 0 !important;
 	z-index: -1;
-	transition: 0.2s;
+	transition: 0.2s !important;
 }
 
 .description-title{
@@ -63,7 +63,7 @@ body{
 	overflow: hidden;
 	border: 0;
 	border-radius: 1.2vw;
-	transition: 0.2s;
+	transition: 0.2s !important;
 	background-color: var(--text);
 	color: var(--background);
 }
@@ -79,7 +79,7 @@ body{
 }
 
 .currentDescription{
-	opacity: 1;
+	opacity: 1 !important;
 	z-index: 1;
 }
 
@@ -120,7 +120,7 @@ body{
 	color: white;
 	background-color: var(--container);
 	border-radius: 1vw;
-	transition: 0.3s;
+	transition: 0.3s !important;
 	overflow: hidden;
 }
 
@@ -128,7 +128,7 @@ body{
 	color: var(--title);
 	font-size: 4.5vw;
 	z-index: 5;
-	transition: opacity 0.3s;
+	transition: opacity 0.3s !important;
 	display: flex;
 	justify-content: center;
 	text-align: center;
@@ -141,10 +141,11 @@ body{
 }
 
 .project:hover .project-title{
-	opacity: 0;
+	opacity: 0 !important;
 }
 
-.project:hover .project-buttons{
+.project:hover .project-buttons, 
+.project:hover .project-button-expand{
 	opacity: 1;
 }
 
@@ -165,12 +166,12 @@ body{
 	display: flex;
 	border-radius: 20px;
 	filter: grayscale(100%);
-	transition: 0.3s;
+	transition: 0.3s !important;
 }
 
 .project-images-image{
 	width: 55.8vw; /* width: 100%; /* pas compatible avec firefox */
-	object-fit: contain;
+	object-fit: cover;
 }
 
 .project-buttons{
@@ -195,8 +196,27 @@ body{
 	fill: var(--container);
 }
 
+.project-button-expand{
+	z-index: 10;
+	position: absolute;
+	top: 90%;
+	left: 93%;
+	border: 0;
+	background-color: transparent;
+	transition: 0.2s !important;
+	opacity: 0;
+}
+
+.project-button-expand img{
+	width: 1.5vw;
+}
+
 .project-button-swipe:hover{
 	cursor: pointer;
+	transform: scale(1.2);
+}
+
+.project-button-expand:hover{
 	transform: scale(1.2);
 }
 
@@ -221,7 +241,7 @@ body{
 	border: 0;
 	border-radius: 100%;
 	margin: 1.4vh;
-	transition: 0.3s;
+	transition: 0.3s !important;
 	position: relative;
 }
 
@@ -237,8 +257,8 @@ body{
 	border-radius: 0.6vw;
 	z-index: 10;
 	white-space: nowrap;
-	transition: 0.15s;
-	transform: scale(0);
+	transition: 0.15s !important;
+	transform: scale(0) !important;
 }
 
 .currentPoint{
@@ -250,7 +270,7 @@ body{
 }
 
 .point:hover .point-indication{
-	transform: scale(1);
+	transform: scale(1) !important;
 }
 
 /* *************** BOUTON POUR FEMER LA FENÊTRE ************ */
