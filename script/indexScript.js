@@ -15,12 +15,17 @@ document.addEventListener("DOMContentLoaded", function() {
 	  entries.forEach((entry) => {
 	  	// affiche les éléments quand il entre dans la partie visible de la page
 	    if (entry.isIntersecting) {
-	      entry.target.style.transform = "scale(1)";
-	      entry.target.style.opacity = "1";
+	      	entry.target.style.transform = "scale(1)";
+	     	entry.target.style.opacity = "1";
+	    }
+	    else
+	    {
+	    	entry.target.style.transform = "scale(0)";
+	      	entry.target.style.opacity = "0";
 	    }
 	  });
 	}, {
-	  threshold: 0.1, // Déclenche quand 10% de l'élément est visible
+	  	threshold: 0.1, // Déclenche quand 10% de l'élément est visible
 	});
 
 	elements.forEach((element) => observer.observe(element));
