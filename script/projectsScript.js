@@ -89,11 +89,14 @@ function swipeProject(id)
 
 	// change la postion et l'aspect des projet
 	projects.forEach(project => {
+		console.log(project);
 		let idDif = currentProjectId - project.id;
 
 		if(idDif === -1 || idDif === 1)
 		{
-			project.style.transform = 'scale(0.8)';
+			console.log('important on', project);
+			//project.style.transform = 'scale(0.8)';
+			project.setAttribute('style', 'transform: scale(0.8) !important'); // imposer l'attribut important
 			project.style.top = `${15 + (-idDif) * (-18)}vh`;
 			project.style.zIndex = '1';
 			project.style.opacity = '0.6';
