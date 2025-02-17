@@ -43,7 +43,7 @@ body{
 }
 
 .description-text{
-	font-size: 1.2vw;
+	font-size: 1vw;
 	color: var(--text);
 	font-family: aston;
 	width: 90%;
