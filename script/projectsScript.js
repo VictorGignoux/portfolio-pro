@@ -52,7 +52,7 @@ document.addEventListener("DOMContentLoaded", () => {
 	projects.forEach(project => {
 		project.addEventListener('mouseenter', () => {
 			let video = project.querySelector('video');
-			if(video)
+			if(video && project.id == currentProjectId)
 			{
 				video.play();
 			}
@@ -89,12 +89,10 @@ function swipeProject(id)
 
 	// change la postion et l'aspect des projet
 	projects.forEach(project => {
-		console.log(project);
 		let idDif = currentProjectId - project.id;
 
 		if(idDif === -1 || idDif === 1)
 		{
-			console.log('important on', project);
 			//project.style.transform = 'scale(0.8)';
 			project.setAttribute('style', 'transform: scale(0.8) !important'); // imposer l'attribut important
 			project.style.top = `${15 + (-idDif) * (-18)}vh`;
@@ -183,7 +181,7 @@ function compressOrExpandImages(idProject)
 {
 	let project = document.getElementById(idProject);
 	let projectImages = project.querySelectorAll('.project-images-image');
-	let projectButtonImage = project.querySelector('.project-button-expand-image');
+	let projectButtonImage = project.querySelector('.project-button-param-image');
 	projectImages.forEach(image => {
 		let styles = getComputedStyle(image);
 		let objectFitValue = styles.getPropertyValue('object-fit');
@@ -200,4 +198,22 @@ function compressOrExpandImages(idProject)
 			projectButtonImage.src = "svg/compress.svg";
 		}
 	});
+}
+
+function setSoundOnOrOff(idProject)
+{
+	let project = document.getElementById(idProject);
+	let projectVideo = project.querySelector('.project-video');
+	let projectButtonImage = project.querySelector('.project-button-param-image');
+
+	projectVideo.muted = !projectVideo.muted;
+
+	if(projectVideo.muted)
+	{
+		projectButtonImage.src = "svg/soundoff.svg";
+	}
+	else
+	{
+		projectButtonImage.src = "svg/soundon.svg";
+	}
 }

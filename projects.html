@@ -34,12 +34,13 @@
 		<div id="description-4" class="description">
 			<p class="description-title">SMART CAMPUS (2025)</p>
 			<p class="description-text">
-				Dans le cadre de mon BUT Informatique et du projet Smart Campus de l'université de La Rochelle, moi et quatres camarades avons développé le site "Smart Campus" qui permet, grâce à une installation de capteurs d'humidité, de température et de CO2 dans les salles du batiment, d'avoir un suivi des données des salles de l'IUT. 
+				Dans le cadre de mon BUT Informatique et du projet Smart Campus de l'université de La Rochelle, moi et quatre camarades avons développé le site "Smart Campus" qui permet, grâce à une installation de capteurs d'humidité, de température et de CO2 dans les salles du bâtiment, d'avoir un suivi des données des salles de l'IUT. 
 			</p>
 			<p class="description-text">
-				Grâce au traitement de ces données, les utilisateurs sont informés des conditions des salles et sont conseillés afin d'améliorer leur confort écologiquement et économiquement.
-				Le site permet aussi à un utilisateur connecté (responsable du batiment et technicien) de gérer les salles et
-				les systèmes d'acquisition des batiments.
+				Grâce au traitement de ces données, les utilisateurs sont informés des conditions des salles et sont conseillés afin d'améliorer leur confort écologiquement et économiquement. 
+			</p>
+			<p class="description-text">
+				Le site permet aussi à un utilisateur connecté (responsable du bâtiment et technicien) de gérer les salles et les systèmes d'acquisition des bâtiments.
 			</p>
 			<div class="description-techs">
 				<img src="svg/symfony.svg">
@@ -52,10 +53,13 @@
 		<div id="description-3" class="description">
 			<p class="description-title">SOUL'S GUIDE (2024)</p>
 			<p class="description-text">
-				Soul's Guide est un jeu vidéo de plateforme...
+				Soul's Guide est un jeu vidéo de plateforme en 2D appelé <I>Speedrunner</I>, car le but est de finir les quatre niveaux le plus vite possible tout en étant poursuivi par le boss qu'on affronte dans le dernier niveau.
 			</p>
 			<p class="description-text">
-				Ce jeu est le résultat du travail de groupe de fin de première année de BUT. A quatre, nous l'avons développé en 2 semaines sur QTCreator en C++.
+				Des ennemis et des objets sont dispersés dans les niveaux afin d'aider et d'entraver le joueur. À chaque fin niveau, le joueur gagne un objet qui l'aidera pour le reste de l'aventure (Exemple : un katana permettant de tuer les ennemis à la fin du niveau 1).
+			</p>
+			<p class="description-text">
+				Ce jeu est le résultat du travail de groupe de fin de première année de BUT. À quatre, nous l'avons développé en 2 semaines sur QTCreator en C++. Deux versions du jeu existent avec des niveaux différents.
 			</p>
 			<div class="description-techs">
 				<img src="svg/QTCreator.svg">
@@ -66,10 +70,10 @@
 		<div id="description-2" class="description">
 			<p class="description-title">REFERENCES DESIGN (2024)</p>
 			<p class="description-text">
-				Références Design est un site permettant d'enregistrer et de classer dans des catégories et sous-catégories des références artistiques et d'ajouter un titre, une image et une description personalisés.
+				Références Design est un site permettant d'enregistrer et de classer dans des catégories et sous-catégories des références artistiques. Il est possible de créer, supprimer et modifier les références qui sont composées d'une image, un titre et une description.
 			</p>
 			<p class="description-text">
-				J'ai développé ce projet tout seul avec Symfony pour une étudiante en art.
+				J'ai développé cet outil tout seul avec Symfony pour une étudiante en arts afin de l'aider dans ses études.
 			</p>
 			<div class="description-techs">
 				<img src="svg/symfony.svg">
@@ -91,7 +95,13 @@
 		<div id="description-0" class="description">
 			<p class="description-title">LOIN DE TOUT (2023)</p>
 			<p class="description-text">
-				Loin De Tout...
+				Le joueur incarne un petit robot isolé sur une planète inconnue dont il veut s'échapper. Pour cela, il doit construire une fusée à partir des ressources présentes sur cette planète. Lancez des expéditions et partez en exploration afin d'obtenir des matériaux qui permettront de fabriquer les pièces nécessaires à la construction de la fusée.
+			</p>
+			<p class="description-text">
+				Il arrive que des voyageurs s'arrêtent sur votre planète et acceptent de vous échanger des matériaux ou viennent tout simplement vous piller.
+			</p>
+			<p class="description-text">
+				Ce jeu est mon tout premier projet personnel abouti. Je l'ai développé sur Unity3D et modélisé à l'aide de l'outil intégré Probuilder. J'ai aussi composé la musique sur FL Studio.
 			</p>
 			<div class="description-techs">
 				<img src="svg/unity.svg">
@@ -127,18 +137,21 @@
 						<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path d="M278.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-160 160c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L210.7 256 73.4 118.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l160 160z"/></svg>
 					</button>
 				</div>
-				<button class="project-button-expand no-start-animation">
-					<img src="svg/compress.svg" class="project-button-expand-image" onclick="compressOrExpandImages(4)">
+				<button class="project-button-param no-start-animation">
+					<img src="svg/compress.svg" class="project-button-param-image" onclick="compressOrExpandImages(4)">
 				</button>
 			</div>
 
 			<!-------------------------------------- SOUL'S GUIDE ------------------------------------->
 			<div id="3" class="project no-start-animation" onclick="swipeProject(3)">
-				<video loop playsinline muted>
-					<source src="videos/run1.mp4" type="video/mp4">
+				<video class="project-video" loop playsinline muted>
+					<source src="videos/soulsguide.mp4" type="video/mp4">
 				</video>
 				<p class="project-title">SOUL'S</p>
 				<p class="project-title">GUIDE</p>
+				<button class="project-button-param no-start-animation">
+					<img src="svg/soundoff.svg" class="project-button-param-image" onclick="setSoundOnOrOff(3)">
+				</button>
 			</div>
 
 			<!----------------------------------------- CARNET ---------------------------------------->
@@ -159,8 +172,8 @@
 						<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path d="M278.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-160 160c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L210.7 256 73.4 118.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l160 160z"/></svg>
 					</button>
 				</div>
-				<button class="project-button-expand no-start-animation">
-					<img src="svg/compress.svg" class="project-button-expand-image" onclick="compressOrExpandImages(2)">
+				<button class="project-button-param no-start-animation">
+					<img src="svg/compress.svg" class="project-button-param-image" onclick="compressOrExpandImages(2)">
 				</button>
 			</div>
 
@@ -172,11 +185,14 @@
 
 			<!------------------------------------------- LDT ----------------------------------------->
 			<div id="0" class="project no-start-animation" onclick="swipeProject(0)">
-				<video loop playsinline muted>
+				<video class="project-video" loop playsinline muted>
 					<source src="videos/LDT.mp4" type="video/mp4">
 				</video>
 				<p class="project-title">LOIN DE</p>
 				<p class="project-title">TOUT</p>
+				<button class="project-button-param no-start-animation">
+					<img src="svg/soundoff.svg" class="project-button-param-image" onclick="setSoundOnOrOff(0)">
+				</button>
 			</div>
 		</div>
 

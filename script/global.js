@@ -31,6 +31,7 @@ document.addEventListener("DOMContentLoaded", function() {
 	/************** DECLARATIONS HTML ****************/
 	const scrollButton = document.getElementById('scroll-button');
 	const params = document.getElementById('params');
+	const notification = document.getElementById('notification');
 
 	/************* INIT ********************/
 
@@ -61,6 +62,7 @@ document.addEventListener("DOMContentLoaded", function() {
 		// garde les params et le scroll button "sticky"
 		scrollButton.style.top = `calc(${window.scrollY}px + 90vh)`;
 		params.style.top = `calc(${window.scrollY}px + 4vh)`;
+		notification.style.top = `calc(${window.scrollY}px + 50vh)`;
 	});
 
 	// animation d'apparition des éléments

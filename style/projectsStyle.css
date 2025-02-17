@@ -136,7 +136,7 @@ body{
 }
 
 .project:hover{
-	box-shadow: 0 0 2em var(--border);
+	box-shadow: 0 0 1.5em var(--border);
 	cursor: pointer;
 }
 
@@ -145,7 +145,7 @@ body{
 }
 
 .project:hover .project-buttons, 
-.project:hover .project-button-expand{
+.project:hover .project-button-param{
 	opacity: 1;
 }
 
@@ -196,7 +196,7 @@ body{
 	fill: var(--container);
 }
 
-.project-button-expand{
+.project-button-param{
 	z-index: 10;
 	position: absolute;
 	top: 90%;
@@ -207,7 +207,7 @@ body{
 	opacity: 0;
 }
 
-.project-button-expand img{
+.project-button-param img{
 	width: 1.5vw;
 }
 
@@ -216,7 +216,7 @@ body{
 	transform: scale(1.2);
 }
 
-.project-button-expand:hover{
+.project-button-param:hover{
 	transform: scale(1.2);
 }
 
