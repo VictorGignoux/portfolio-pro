@@ -81,8 +81,12 @@ button:hover{
 	transition: 0.15s !important;
 }
 
-.link:hover .link-underline{
+.link:not(.beta-button):hover .link-underline{
 	width: 100%;
+}
+
+.link-text{
+	color: var(--button);
 }
 
 /* notification */
@@ -175,4 +179,8 @@ button:hover{
 	height: 3vw;
 	transform: scale(0);
 	transition: transform 0.3s;
+}
+
+.beta-button p{
+	text-decoration: line-through;
 }

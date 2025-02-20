@@ -85,7 +85,13 @@
 		<div id="description-1" class="description">
 			<p class="description-title">BATAILLE NAVALE (2024)</p>
 			<p class="description-text">
-				Bataille navale...
+				L'objectif de ce projet était de reproduire la bataille navale dans un terminal avec un client qui joue contre un serveur. Le serveur génère la position des bateaux et le client envoie au serveur les cases qu'il veut toucher. 
+			</p>
+			<p class="description-text">
+				Le client et le serveur communiquent en protocole TCP sur le réseau local. Il est donc possible de lancer le serveur et le client sur des machines différentes. Plusieurs clients peuvent se connecter aux serveur et jouer en même temps. Le serveur génère une partie différente pour chaque client.
+			</p>
+			<p class="description-text">
+				Le jeu a été développé en duo en langage C. Vous pouvez retrouver et tester le projet sur mon <a class="link-text" href="https://github.com/VictorGignoux/BattleShip" target="_blank">github</a>.
 			</p>
 			<div class="description-techs">
 				<img src="svg/c.svg">
@@ -181,6 +187,20 @@
 			<div id="1" class="project no-start-animation" onclick="swipeProject(1)">
 				<p class="project-title">BATAILLE</p>
 				<p class="project-title">NAVALE</p>
+				<div class="project-images" data-left="0">
+					<img src="images_projets/bn1.png" class="project-images-image no-start-animation">
+					<img src="images_projets/bn2.png" class="project-images-image no-start-animation">
+					<img src="images_projets/bn3.png" class="project-images-image no-start-animation">
+					<img src="images_projets/bn4.png" class="project-images-image no-start-animation">
+				</div>
+				<div class="project-buttons no-start-animation">
+					<button class="project-button-swipe leftArrow no-start-animation" onclick="swipeImage(1, 1)">
+						<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path d="M41.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.3 256 246.6 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z"/></svg>
+					</button>
+					<button class="project-button-swipe rightArrow no-start-animation" onclick="swipeImage(1, -1)">
+						<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path d="M278.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-160 160c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L210.7 256 73.4 118.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l160 160z"/></svg>
+					</button>
+				</div>
 			</div>
 
 			<!------------------------------------------- LDT ----------------------------------------->
