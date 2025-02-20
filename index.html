@@ -13,7 +13,8 @@
 
 	<!-- notification -->
 	<div id="notification">
-		<p id="notification-text" class="no-start-animation">copié !</p>
+		<p id="notification-text" class="no-start-animation fr">copié !</p>
+		<p id="notification-text" class="no-start-animation en">copied !</p>
 	</div>
 
 	<!-- paramètres langue et theme -->
@@ -22,8 +23,12 @@
 			<svg id="params-light" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.--><path d="M361.5 1.2c5 2.1 8.6 6.6 9.6 11.9L391 121l107.9 19.8c5.3 1 9.8 4.6 11.9 9.6s1.5 10.7-1.6 15.2L446.9 256l62.3 90.3c3.1 4.5 3.7 10.2 1.6 15.2s-6.6 8.6-11.9 9.6L391 391 371.1 498.9c-1 5.3-4.6 9.8-9.6 11.9s-10.7 1.5-15.2-1.6L256 446.9l-90.3 62.3c-4.5 3.1-10.2 3.7-15.2 1.6s-8.6-6.6-9.6-11.9L121 391 13.1 371.1c-5.3-1-9.8-4.6-11.9-9.6s-1.5-10.7 1.6-15.2L65.1 256 2.8 165.7c-3.1-4.5-3.7-10.2-1.6-15.2s6.6-8.6 11.9-9.6L121 121 140.9 13.1c1-5.3 4.6-9.8 9.6-11.9s10.7-1.5 15.2 1.6L256 65.1 346.3 2.8c4.5-3.1 10.2-3.7 15.2-1.6zM160 256a96 96 0 1 1 192 0 96 96 0 1 1 -192 0zm224 0a128 128 0 1 0 -256 0 128 128 0 1 0 256 0z"/></svg>
 		</button>
 		<div id="params-separator"></div>
-		<button>
+		<button onclick="setEnglish()">
 			<p id="params-lang">EN</p>
+		</button>
+		<div id="params-separator"></div>
+		<button onclick="setFrench()">
+			<p id="params-lang">FR</p>
 		</button>
 	</div>
 
@@ -41,15 +46,17 @@
 		<div id="header-links">
 			<a class="link" href="projects.html">
 				<div class="link-underline"></div>
-				<p class="header-links-text">projets</p>
+				<p class="header-links-text fr">projets</p>
+				<p class="header-links-text en">projects</p>
 			</a>
 			<a class="link beta-button" href="#contact"> <!-- href="contact.html"> -->
 				<div class="link-underline"></div>
 				<p class="header-links-text">contact</p>
 			</a>
-			<a class="link beta-button" href="#explorer"> <!-- href="contact.html"> -->
+			<a class="link beta-button" href="#explore"> <!-- href="contact.html"> -->
 				<div class="link-underline"></div>
-				<p class="header-links-text">explorer</p>
+				<p class="header-links-text fr">explorer</p>
+				<p class="header-links-text en">explore</p>
 			</a>
 		</div>
 	</header>
@@ -63,11 +70,16 @@
 		<div id="aboutme-description">
 			<div>
 				<div id="aboutme-description-title-color"></div>
-				<h1>A PROPOS DE MOI</h1>
+				<h1 class="fr">A PROPOS DE MOI</h1>
+				<h1 class="en">ABOUT ME</h1>
 			</div>
-			<p>
+			<p class="fr">
 				Je suis étudiant en BUT Informatique à La Rochelle. Je développe principalement des sites web et des jeux vidéos.<br />
 				C'est sur Scratch, au collège, que j'ai découvert pour la première fois la beauté de la programmation et que j'ai réalisé l'immense source de création et d'innovation que cela représentait.
+			</p>
+			<p class="en">
+				I am a student in Computer Science (BUT) in La Rochelle. I mainly develop websites and video games.
+				It was on Scratch, back in middle school, that I first discovered the beauty of programming and realized the immense source of creativity and innovation it represented.
 			</p>
 			<div id="aboutme-contacts">
 				<div class="aboutme-contacts-container">
@@ -127,7 +139,8 @@
 		</div>
 
 		<button id="techs-button" class="link" onclick="hideAndShowHiddenTechs()">
-			<p>voir tout</p>
+			<p class="fr">voir tout</p>
+			<p class="en">see all</p>
 			<div class="link-underline"></div>
 		</button>
 	</div>
@@ -137,7 +150,8 @@
 		<div id="projects-container">
 			<button id="project-ldt" class="project" onclick="openProject(0)">
 				<p class="project-description-title">Loin De Tout</p>
-				<p class="project-description-text">Jeu vidéo 3D de production et de gestion de ressources. Le but est de construire une fusée pour s'évader de la planète.</p>
+				<p class="project-description-text fr">Jeu vidéo 3D de production et de gestion de ressources. Le but est de construire une fusée pour s'évader de la planète.</p>
+				<p class="project-description-text en">A 3D video game focused on resource production and management. The goal is to build a rocket to escape the planet.</p>
 				<div class="project-description-techs">
 					<img src="svg/unity.svg">
 				</div>
@@ -148,7 +162,8 @@
 
 			<button id="project-sc" class="project" onclick="openProject(4)">
 				<p class="project-description-title">Smart Campus</p>
-				<p class="project-description-text">Outil de gestion d'un campus universitaire et d'analyse des conditions environnementales des batiments et de leurs salles.</p>
+				<p class="project-description-text fr">Outil de gestion d'un campus universitaire et d'analyse des conditions environnementales des batiments et de leurs salles.</p>
+				<p class="project-description-text en">A management tool for a university campus and an analysis platform for the environmental conditions of buildings and their rooms.</p>
 				<div class="project-description-techs">
 					<img src="svg/symfony.svg">
 					<img src="svg/docker.svg">
@@ -160,7 +175,8 @@
 
 			<button id="project-sg" class="project" onclick="openProject(3)">
 				<p class="project-description-title">Soul's Guide</p>
-				<p class="project-description-text">Jeu vidéo rétro de plateformes. L'objectif est de finir les 4 niveaux du jeu le plus vite possible en étant poursuivi par le boss.</p>
+				<p class="project-description-text fr">Jeu vidéo rétro de plateformes. L'objectif est de finir les 4 niveaux du jeu le plus vite possible en étant poursuivi par le boss.</p>
+				<p class="project-description-text en">A retro platformer video game. The goal is to complete the 4 levels as quickly as possible while being chased by the boss.</p>
 				<div class="project-description-techs">
 					<img src="svg/QTCreator.svg">
 					<img src="svg/cpp.svg">
@@ -171,7 +187,8 @@
 			</button>
 		</div>
 		<a id="techs-button" class="link" href="projects.html">
-			<p>voir tous mes projets</p>
+			<p class="fr">voir tous mes projets</p>
+			<p class="en">see all my projects</p>
 			<div class="link-underline"></div>
 		</a>
 	</div>
@@ -179,9 +196,18 @@
 	<!-- ----- FOOTER ----- -->
 	<footer class="container no-start-animation">
 		<div id="footer-links">
-			<a href="projects.html">projets</a>|<a href="contact.html">contact</a>|<a href="contact.html">explorer</a>
+			<a href="projects.html" class="fr">projets</a>
+			<a href="projects.html" class="en">projects</a>
+			|
+			<a href="#contact">contact</a>
+			|
+			<a href="#explorer" class="fr">explorer</a>
+			<a href="#explore" class="en">explore</a>
 		</div>
-		<div id="footer-copyrights">
+		<div id="footer-copyrights" class="fr">
+			&copy; 2025 | Victor Gignoux | Tous droits réservés
+		</div>
+		<div id="footer-copyrights" class="en">
 			&copy; 2025 | Victor Gignoux | All rights reserved
 		</div>
 		<div id="footer-contacts">

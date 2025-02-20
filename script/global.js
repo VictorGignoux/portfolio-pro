@@ -35,6 +35,8 @@ document.addEventListener("DOMContentLoaded", function() {
 
 	/************* INIT ********************/
 
+	setEnglish();
+
 	// initialisation du theme par défaut (dark)
 	const currentTheme = sessionStorage.getItem('theme');
 
@@ -135,5 +137,33 @@ function scrollToTop()
 	window.scroll({
 	  top: 0,
 	  behavior: "smooth",
+	});
+}
+
+function setEnglish()
+{
+	let frElements = document.querySelectorAll('.fr');
+	let enElements = document.querySelectorAll('.en')
+
+	frElements.forEach(element => {
+		element.style.display = 'none';
+	});
+
+	enElements.forEach(element => {
+		element.style.display = 'flex';
+	});
+}
+
+function setFrench()
+{
+	let frElements = document.querySelectorAll('.fr');
+	let enElements = document.querySelectorAll('.en')
+
+	frElements.forEach(element => {
+		element.style.display = 'flex';
+	});
+
+	enElements.forEach(element => {
+		element.style.display = 'none';
 	});
 }

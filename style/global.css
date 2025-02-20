@@ -122,9 +122,9 @@ button:hover{
 
 #params{
 	position: fixed;
-	left: 92vw;
+	left: 90vw;
 	top: 4vh;
-	width: 5.5vw;
+	width: 7.5vw;
 	height: 5vh;
 	z-index: 10;
 	display: flex;
