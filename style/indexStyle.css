@@ -86,6 +86,11 @@ header{
 	gap: 0.8em;
 }
 
+#aboutme-contacts-container-cv{
+	color: var(--button);
+	font-size: 1.5em;
+}
+
 .aboutme-contacts-copy{
 	max-width: 1vw;
 }
