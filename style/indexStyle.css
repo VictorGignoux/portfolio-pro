@@ -86,6 +86,10 @@ header{
 	gap: 0.8em;
 }
 
+.aboutme-contacts-container a{
+	color: var(--text);
+}
+
 #aboutme-contacts-container-cv{
 	color: var(--button);
 	font-size: 1.5em;
@@ -96,7 +100,7 @@ header{
 }
 
 #aboutme-contacts-mail:hover{
-	width: 50%;
+	width: 45%;
 	background-color: var(--container);
 	cursor: pointer;
 }
