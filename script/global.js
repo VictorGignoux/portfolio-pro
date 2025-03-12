@@ -32,6 +32,8 @@ document.addEventListener("DOMContentLoaded", function() {
 	const scrollButton = document.getElementById('scroll-button');
 	const params = document.getElementById('params');
 	const notification = document.getElementById('notification');
+	const scroll = document.getElementById('scroll-container');
+	const scrollValue = document.getElementById('scroll-content');
 
 	/************* INIT ********************/
 
@@ -63,6 +65,9 @@ document.addEventListener("DOMContentLoaded", function() {
 		scrollButton.style.top = `calc(${window.scrollY}px + 90vh)`;
 		params.style.top = `calc(${window.scrollY}px + 4vh)`;
 		notification.style.top = `calc(${window.scrollY}px + 50vh)`;
+		scroll.style.top = `calc(${window.scrollY}px + 40vh)`;
+		let scrollPercentage = window.scrollY * 100 / (document.documentElement.scrollHeight - window.innerHeight);
+		scrollValue.style.height = `${scrollPercentage}%`;
 	});
 
 	// animation d'apparition des éléments

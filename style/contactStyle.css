@@ -4,14 +4,52 @@ body{
 	display: flex;
 	justify-content: space-evenly;
 	align-items: center;
+}
+
+form{
+	display: flex;
 	flex-direction: column;
+	justify-content: space-between;
+	background-color: var(--container);
+	width: 40vw;
+	height: 70vh;
+	border-radius: 2vw;
+	padding: 4vh 3vw;
+	font-size: 2em;
+	color: var(--text);
 }
 
-img{
-	width: 15vw;
+.section{
+	display: flex;
+	justify-content: space-between;
 }
 
-h1{
-	font-size: 4em;
-	color: var(--title);
+.input{
+	width: 70%;
+	border-radius: 0.6vw;
+	border: 0;
+	font-size: 0.6em;
+	font-family: aston;
+	padding: 0 0.6vw;
+}
+
+.form-textarea{
+	height: 25vh;
+}
+
+#form-buttons{
+	width: 45%;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.form-button{
+	width: 8vw;
+	height: 5vh;
+	border-radius: 2vw;
+	border: 0;
+	background-color: var(--button);
+	font-family: aston;
+	font-size: 0.6em;
 }

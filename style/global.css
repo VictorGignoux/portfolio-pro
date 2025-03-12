@@ -100,6 +100,7 @@ button:hover{
 	width: 6vw;
 	height: 6vh;
 	overflow: hidden;
+	pointer-events: none;
 }
 
 #notification-text{
@@ -181,6 +182,36 @@ button:hover{
 	transition: transform 0.3s;
 }
 
+.beta-button{
+	text-decoration: line-through;
+}
+
 .beta-button p{
 	text-decoration: line-through;
+}
+
+#closePageButton{
+	z-index: 4;
+	position: fixed;
+	top: 3vh;
+	left: 1.5vw;
+}
+
+/* scroll */
+
+#scroll-container{
+	position: fixed;
+	left: 1.8vw;
+	top: 40vh;
+	height: 20vh;
+	width: 0.2vw;
+	background-color: var(--container);
+	overflow: hidden;
+	border-radius: 5px;
+}
+
+#scroll-content{
+	position: absolute;
+	width: 100%;
+	background-color: var(--border);
 }

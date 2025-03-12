@@ -275,13 +275,6 @@ body{
 
 /* *************** BOUTON POUR FEMER LA FENÊTRE ************ */
 
-#closePageButton{
-	z-index: 4;
-	position: fixed;
-	top: 3vh;
-	left: 1.5vw;
-}
-
 video{
 	position: absolute;
 	object-fit: cover;
