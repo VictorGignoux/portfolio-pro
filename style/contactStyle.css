@@ -24,6 +24,15 @@ form{
 	justify-content: space-between;
 }
 
+ #input-file{
+ 	display: flex;
+ 	align-items: center;
+ 	width: 70%;
+ 	border-radius: 0.6vw;
+ 	border: 3px solid var(--border);
+ 	padding: 0 0.6vw;
+ }
+
 .input{
 	width: 70%;
 	border-radius: 0.6vw;
@@ -52,4 +61,16 @@ form{
 	background-color: var(--button);
 	font-family: aston;
 	font-size: 0.6em;
+}
+
+#form-bottom{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+#required-input{
+	font-size: 0.6em;
+	color: var(--text);
+	font-family: peace;
 }

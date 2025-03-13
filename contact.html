@@ -7,12 +7,19 @@
 	<link rel="stylesheet" type="text/css" href="style/contactStyle.css">
 	<link rel="stylesheet" type="text/css" href="style/global.css">
 	<script type="text/javascript" src="script/global.js"></script>
+	<script type="text/javascript" src="script/contact.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
 </head>
 <body>
 	<a id="closePageButton" class="link" href="index.html">
 		<div class="link-underline"></div>
 		<p id="closePageButtonText">fermer</p>
 	</a>
+
+	<!-- notification -->
+	<div id="notification">
+		<p id="notification-text" class="no-start-animation"></p>
+	</div>
 
 	<!-- paramètres langue et theme -->
 	<div id="params">
@@ -21,36 +28,43 @@
 		</button>
 	</div>
 
-	<form action="" method="post">
+	<form id="contact-form" method="post" enctype="multipart/form-data">
 		<div class="section">
-			<label>Nom</label>
-			<input class="input" type="text" name="nom" placeholder="Votre nom et prénom...">
+			<label>Nom*</label>
+			<input id="input-nom" class="input" type="text" name="nom" placeholder="Votre nom et prénom..." required>
 		</div>
 
 		<div class="section">
-			<label>Mail</label>
-			<input class="input" type="text" name="mail" placeholder="Votre adresse mail...">
+			<label>Mail*</label>
+			<input id="input-mail" class="input" type="text" name="mail" placeholder="Votre adresse mail..." required>
 		</div>
 
 		<div class="section">
 			<label>Objet</label>
-			<input class="input" type="text" name="objet" placeholder="L'objet de votre message...">
+			<input id="input-objet" class="input" type="text" name="objet" placeholder="L'objet de votre message...">
 		</div>
 
-		<div class="section">
+		<!-- <div class="section">
 			<label>Fichier</label>
-			<input type="file" name="file">
-		</div>
+			<div id="input-file">
+				<input type="file" name="file">
+			</div>
+		</div> -->
 
 		<div class="section">
 			<label>Message</label>
-			<textarea class="input form-textarea" placeholder="Dites-moi tout..."></textarea>
+			<textarea id="input-message" class="input form-textarea" placeholder="Votre message..."></textarea>
 		</div>
 
-		<div id="form-buttons">
-			<button class="form-button" type="reset">ANNULER</button>
-			<button class="form-button" type="submit">ENVOYER</button>		
+		<div id="form-bottom">
+			<div id="form-buttons">
+				<button class="form-button" type="reset">ANNULER</button>
+				<button class="form-button" type="submit">ENVOYER</button>		
+			</div>
+
+			<p id="required-input">* champs obligatoires</p>	
 		</div>
+
 	</form>
 </body>
 </html>

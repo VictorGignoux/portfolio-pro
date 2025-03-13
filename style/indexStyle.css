@@ -144,12 +144,11 @@ header{
 }
 
 .tech{
-	width: 4vw;
+	width: 5vw;
 	display: flex;
+	flex-direction: column;
 	justify-content: center;
 	align-items: center;
-	padding: 1vw;
-	border-radius: 1vw;
 	transform: scale(0);
 	transition: transform 0.4s; /* doesn't need important */
 }
@@ -159,13 +158,21 @@ header{
 	max-width: 4vw;
 }
 
+.tech-name{
+	position: absolute;
+	top: 140%;
+	color: var(--button);
+	font-family: aston;
+	transition: 0.2s;
+}
+
 #techs-button{
 	background-color: var(--background);
 	border: 0;
 }
 
-.tech:hover{
-	background-color: var(--container);
+.tech:hover .tech-name{
+	top: 100%;
 }
 
 /* ********** PROJETS ********** */

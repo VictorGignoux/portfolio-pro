@@ -47,7 +47,9 @@ function initCopy(elementId)
 		document.body.removeChild(tempInput);
 			
 		//affichage de la notification
+		notificationText.innerText = "copié !";
 		notificationText.style.top = "0";
+		notificationText.style.width = "6vw";
 		window.clearTimeout(notificationAnimation);
 		notificationAnimation = setTimeout(() => {
 			notificationText.style.top = "7vh";
@@ -77,7 +79,7 @@ function hideAndShowHiddenTechs()
 	else
 	{
 		// animation d'affichage des techs cachées
-		hiddenTechs.style.height = "40%";
+		hiddenTechs.style.height = "35%";
 		isHiddenTechsShown = true;
 		techsButton.innerText = "cacher";
 		
