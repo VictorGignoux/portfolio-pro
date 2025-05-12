@@ -27,6 +27,18 @@
 
 		<!-- insérer les nouveaux projets ici -->
 
+		<div id="description-5" class="description">
+			<p class="description-title">COD (mai 2025)</p>
+			<p class="description-text">
+				COD est un gestionnaire de Documentation. Il permet d'écrire facilement sa propre documentation et d'y accéder facilement.
+			</p>
+			<div class="description-techs">
+				<img src="svg/symfony.svg">
+				<img src="svg/php.svg">
+				<img src="svg/javascript.svg">
+			</div>
+		</div>
+
 		<div id="description-4" class="description">
 			<p class="description-title">SMART CAMPUS (2025)</p>
 			<p class="description-text">
@@ -39,7 +51,7 @@
 				Le site permet aussi à un utilisateur connecté (responsable du bâtiment et technicien) de gérer les salles et les systèmes d'acquisition des bâtiments.
 			</p>
 			<p class="description-text">
-				Un nouvelle version responsive du projet est en cours en ReactJS !
+				Un version mobile est maintenant disponible !
 			</p>
 			<div class="description-techs">
 				<img src="svg/symfony.svg">
@@ -123,6 +135,29 @@
 			<!-- insérer les nouveaux projets ici -->
 
 			<!---------------------------------------- SMART CAMPUS -------------------------------------->
+			<div id="5" class="project no-start-animation" onclick="swipeProject(5)">
+				<p class="project-title">COD</p>
+				<div class="project-images" data-left="0">
+					<img src="images_projets/cod1.png" class="project-images-image no-start-animation">
+					<img src="images_projets/cod2.png" class="project-images-image no-start-animation">
+					<img src="images_projets/cod3.png" class="project-images-image no-start-animation">
+					<img src="images_projets/cod4.png" class="project-images-image no-start-animation">
+					<img src="images_projets/cod5.png" class="project-images-image no-start-animation">
+				</div>
+				<div class="project-buttons no-start-animation">
+					<button class="project-button-swipe leftArrow no-start-animation" onclick="swipeImage(5, 1)">
+						<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path d="M41.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.3 256 246.6 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z"/></svg>
+					</button>
+					<button class="project-button-swipe rightArrow no-start-animation" onclick="swipeImage(5, -1)">
+						<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path d="M278.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-160 160c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L210.7 256 73.4 118.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l160 160z"/></svg>
+					</button>
+				</div>
+				<button class="project-button-param no-start-animation">
+					<img src="svg/expand.svg" class="project-button-param-image" onclick="compressOrExpandImages(5)">
+				</button>
+			</div>
+
+			<!---------------------------------------- SMART CAMPUS -------------------------------------->
 			<div id="4" class="project no-start-animation" onclick="swipeProject(4)">
 				<p class="project-title">SMART</p>
 				<p class="project-title">CAMPUS</p>
@@ -134,6 +169,7 @@
 					<img src="images_projets/sc5.png" class="project-images-image no-start-animation">
 					<img src="images_projets/sc6.png" class="project-images-image no-start-animation">
 					<img src="images_projets/sc7.png" class="project-images-image no-start-animation">
+					<img src="images_projets/sc8.2.png" class="project-images-image no-start-animation">
 				</div>
 				<div class="project-buttons no-start-animation">
 					<button class="project-button-swipe leftArrow no-start-animation" onclick="swipeImage(4, 1)">
@@ -218,7 +254,10 @@
 
 		<div id="points">
 			<!-- Indiquer quel est le point courant de départ dans les classes -->
-			<button id="point4" class="point currentPoint" onclick="swipeProject(4)">
+			<button id="point5" class="point currentPoint" onclick="swipeProject(5)">
+				<div class="point-indication">COD</div>
+			</button>
+			<button id="point4" class="point" onclick="swipeProject(4)">
 				<div class="point-indication">Smart Campus</div>
 			</button>
 			<button id="point3" class="point" onclick="swipeProject(3)">
