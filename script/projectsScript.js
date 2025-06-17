@@ -1,4 +1,4 @@
-const MAX_PROJECT_ID = 6;		// nombre de projets
+const MAX_PROJECT_ID = 7;		// nombre de projets
 var isScrolling = false;
 var currentProjectId = MAX_PROJECT_ID-1;
 
