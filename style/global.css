@@ -127,7 +127,7 @@ button:hover{
 	left: 95vw;
 	top: 4vh;
 	width: 2.5vw;
-	height: 5vh;
+	height: 2.5vw;
 	z-index: 10;
 	display: flex;
 	justify-content: space-evenly;
@@ -215,4 +215,10 @@ button:hover{
 	position: absolute;
 	width: 100%;
 	background-color: var(--border);
+}
+
+@media screen and (max-width: 780px) {
+    .link{
+        font-size: 2.2vw;
+    }
 }

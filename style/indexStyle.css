@@ -14,12 +14,12 @@ header{
 }
 
 #header-name{
-	font-size: 3.5vw;
+	font-size: 50px;
 	color: var(--title);
 }
 
 #header-links{
-	width: 20%;
+	gap: 5vw;
 	display: flex;
 	justify-content: space-between;
 }
@@ -128,23 +128,22 @@ header{
 }
 
 .techs-container{
-	width: 22%;
+	width: 30%;
 	height: 35%;
 	display: flex;
-	justify-content: space-between;
+	justify-content: space-around;
 	align-items: center;
 	flex-wrap: wrap;
 	overflow: hidden;
 }
 
 #techs-container-hidden{
-	width: 32%;
+	width: 40%;
 	height: 0%;
 	transition: 0.3s !important;
 }
 
 .tech{
-	width: 5vw;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
@@ -162,8 +161,9 @@ header{
 	position: absolute;
 	top: 140%;
 	color: var(--button);
-	font-family: aston;
+    font-family: aston, serif;
 	transition: 0.2s;
+    text-wrap: nowrap;
 }
 
 #techs-button{
@@ -293,4 +293,135 @@ footer{
 #footer-contacts img{
 	width: 1.4vw;
 	margin-right: 1vw;
+}
+
+/* ADAPTIVE */
+
+@media screen and (max-width: 780px) {
+
+    /* HEADER */
+
+    header{
+        flex-direction: column;
+    }
+
+    .header-links-text{
+        font-size: 3vmin;
+    }
+
+    #header-name{
+        font-size: 5vmin;
+    }
+
+    /* ABOUT ME */
+
+    #aboutme{
+        flex-direction: column;
+    }
+
+    #aboutme-photo img{
+        width: 50vmin;
+        height: 30vmin;
+    }
+
+    #aboutme-description{
+        width: 70vw;
+    }
+
+    #aboutme-description h1{
+        font-size: 4vmin;
+    }
+
+    #aboutme-description-title-color{
+        width: 40vmin;
+    }
+
+    #aboutme-description p{
+        font-size: 3vmin;
+    }
+
+    #aboutme-contacts{
+        gap: 2vw;
+    }
+
+    .aboutme-contacts-container{
+        width: 7%;
+        font-size: 3vw;
+    }
+
+    #aboutme-contacts img{
+        width: 4vw;
+        max-height: 7vh;
+    }
+
+    #aboutme-contacts-mail:hover{
+        font-size: 2vw;
+        width: 45%;
+    }
+
+    #aboutme-contacts-phone:hover{
+        width: 48%;
+    }
+
+    .aboutme-contacts-copy{
+        max-width: 2vw;
+    }
+
+    /* TECHS */
+
+    .tech-svg{
+        max-height: 9vw;
+        max-width: 9vw;
+    }
+
+    .techs-container{
+        width: 60%;
+        height: 30%;
+    }
+
+    #techs-container-hidden{
+        width: 80%;
+    }
+
+    #techs-button{
+        margin-top: 5vh;
+    }
+
+    /* PROJECTS */
+
+    #projects{
+        height: auto;
+    }
+
+    #projects-container{
+        flex-direction: column;
+        gap: 5vh;
+    }
+
+    .project{
+        width: 65%;
+        height: 40vh;
+    }
+
+    .project-description-title{
+        font-size: 4vmin;
+    }
+
+    .project-description-text{
+        font-size: 2vmin;
+    }
+
+    /* FOOTER */
+
+    footer{
+        font-size: 2vw;
+    }
+
+    #footer-links{
+        width: 30%;
+    }
+
+    #footer-contacts img{
+        width: 3vw;
+    }
 }

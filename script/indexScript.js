@@ -17,7 +17,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
 /**
  * @brief Redirige le projet séléctionné dans la pages des projets
- * @param int it : l'id du projet séléctionné
+ * @param id
  */
 function openProject(id)
 {
@@ -27,7 +27,7 @@ function openProject(id)
 
 /**
  * @brief Crée un évènement de copie sur les contacts
- * @param string elementId : l'id du contact copié
+ * @param elementId
  */
 function initCopy(elementId)
 {
@@ -79,7 +79,10 @@ function hideAndShowHiddenTechs()
 	else
 	{
 		// animation d'affichage des techs cachées
-		hiddenTechs.style.height = "35%";
+        if(window.matchMedia("(max-width: 780px)").matches)
+            hiddenTechs.style.height = "30%";
+        else
+		    hiddenTechs.style.height = "35%";
 		isHiddenTechsShown = true;
 		techsButton.innerText = "cacher";
 		
