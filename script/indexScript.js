@@ -39,21 +39,18 @@ function initCopy(elementId)
     	let texte = contact.querySelector('p').innerText;
 		let tempInput = document.createElement('input');
 		tempInput.value = texte;
-			
-		// création d'un input temporaire pour permettre l'exécution de la commande "copy"
-		document.body.appendChild(tempInput);
-		tempInput.select();
-		document.execCommand("copy");
-		document.body.removeChild(tempInput);
+
+        // copier numéro de tel
 			
 		//affichage de la notification
+        /* en attendant que ça marche
 		notificationText.innerText = "copié !";
 		notificationText.style.top = "0";
-		notificationText.style.width = "6vw";
 		window.clearTimeout(notificationAnimation);
 		notificationAnimation = setTimeout(() => {
 			notificationText.style.top = "7vh";
 		}, 2000);
+         */
 	});
 }
 
@@ -79,10 +76,7 @@ function hideAndShowHiddenTechs()
 	else
 	{
 		// animation d'affichage des techs cachées
-        if(window.matchMedia("(max-width: 780px)").matches)
-            hiddenTechs.style.height = "30%";
-        else
-		    hiddenTechs.style.height = "35%";
+        hiddenTechs.style.height = "7rem";
 		isHiddenTechsShown = true;
 		techsButton.innerText = "cacher";
 		

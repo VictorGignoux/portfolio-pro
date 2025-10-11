@@ -11,11 +11,11 @@ form{
 	flex-direction: column;
 	justify-content: space-between;
 	background-color: var(--container);
-	width: 40vw;
-	height: 70vh;
+	width: 800px;
+	height: 600px;
 	border-radius: 2vw;
 	padding: 4vh 3vw;
-	font-size: 2em;
+	font-size: 30px;
 	color: var(--text);
 }
 
@@ -37,9 +37,9 @@ form{
 	width: 70%;
 	border-radius: 0.6vw;
 	border: 0;
-	font-size: 0.6em;
+	font-size: 20px;
 	font-family: aston;
-	padding: 0 0.6vw;
+	padding: 0.8vh 0.6vw;
 }
 
 .form-textarea{
@@ -60,7 +60,7 @@ form{
 	border: 0;
 	background-color: var(--button);
 	font-family: aston;
-	font-size: 0.6em;
+	font-size: 20px;
 }
 
 #form-bottom{
@@ -70,7 +70,7 @@ form{
 }
 
 #required-input{
-	font-size: 0.6em;
+	font-size: 20px;
 	color: var(--text);
 	font-family: peace;
 }
